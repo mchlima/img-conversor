@@ -64,7 +64,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md — Create useImageStore composable, extend types, add formatBytes utility, populate i18n keys
-- [ ] 03-02-PLAN.md — Build DropZone, ImageCard, ControlPanel components and wire into page layout
+- [x] 03-02-PLAN.md — Build DropZone, ImageCard, ControlPanel components and wire into page layout
 
 ### Phase 4: Batch Download
 **Goal**: Users can download all converted images in a single ZIP file that is only available after all conversions complete

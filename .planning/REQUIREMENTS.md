@@ -33,7 +33,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **OUTP-01**: Usuário vê o tamanho do arquivo convertido ao lado de cada imagem
 - [x] **OUTP-02**: Usuário vê comparação de tamanho antes/depois (economia em bytes e %)
-- [ ] **OUTP-03**: Usuário pode baixar cada imagem convertida individualmente
+- [x] **OUTP-03**: Usuário pode baixar cada imagem convertida individualmente
 - [ ] **OUTP-04**: Usuário pode baixar todas as imagens convertidas em um arquivo .zip
 - [x] **OUTP-05**: Cada imagem exibe status de processamento (idle / processando / concluído / erro)
 
@@ -103,7 +103,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSZN-04 | Phase 2 | Complete |
 | OUTP-01 | Phase 3 | Complete |
 | OUTP-02 | Phase 3 | Complete |
-| OUTP-03 | Phase 3 | Pending |
+| OUTP-03 | Phase 3 | Complete |
 | OUTP-04 | Phase 4 | Pending |
 | OUTP-05 | Phase 3 | Complete |
 | INFR-01 | Phase 1 | Complete |

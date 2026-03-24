@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-03-24T16:29:06.751Z"
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-03-24T16:33:19.269Z"
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -51,6 +51,7 @@ Plan: 2 of 2
 | Phase 02-processing-pipeline P01 | 10m | 2 tasks | 6 files |
 | Phase 02-processing-pipeline P02 | 3m | 2 tasks | 2 files |
 | Phase 03-ui-and-state P01 | 15m | 2 tasks | 5 files |
+| Phase 03-ui-and-state P02 | 2m | 3 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,9 @@ Recent decisions affecting current work:
 - [Phase 03-ui-and-state]: hasAlpha runs async in background after addImages sets images.value — avoids blocking UI update for responsiveness
 - [Phase 03-ui-and-state]: convertAll skips done/processing items — allows re-running Convert without reprocessing completed images
 - [Phase 03-ui-and-state]: isProcessing is computed() from images array (not stored state) — always consistent, no manual sync needed
+- [Phase 03-ui-and-state]: DropZone compact mode uses flex row with icon + text — clearer affordance than plain text
+- [Phase 03-ui-and-state]: ImageCard savings shown as absolute percentage with sign prefix to avoid confusing double-negative
+- [Phase 03-ui-and-state]: ControlPanel UInputNumber uses local refs synced via watch to maintain reactivity with store state
 
 ### Pending Todos
 
@@ -87,6 +91,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T16:29:06.750Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-03-24T16:33:19.268Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
