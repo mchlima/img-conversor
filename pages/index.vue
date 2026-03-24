@@ -22,6 +22,9 @@
             :item="item"
           />
         </div>
+
+        <!-- Onboarding steps: always visible below image list (ONBD-01) -->
+        <OnboardingSteps />
       </div>
     </main>
 
