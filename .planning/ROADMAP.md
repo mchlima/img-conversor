@@ -28,7 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Vercel deploy from the repository serves the site at a public URL
   3. TypeScript types (`ImageItem`, `ConvertOptions`, status enums) exist and compile cleanly
   4. jSquash WASM plugin is configured in `nuxt.config.ts` and does not cause build errors
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Initialize Nuxt 3 project with all deps, types, i18n, and verify SSG build
+- [ ] 01-02-PLAN.md — Deploy to Vercel and verify production stack end-to-end
 
 ### Phase 2: Processing Pipeline
 **Goal**: A stateless `useProcessor` composable converts any image (JPEG/PNG/WebP) with quality and resize options correctly across Chrome, Firefox, and Safari — including all silent-failure edge cases
@@ -71,7 +75,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold | 0/? | Not started | - |
+| 1. Scaffold | 0/2 | Not started | - |
 | 2. Processing Pipeline | 0/? | Not started | - |
 | 3. UI and State | 0/? | Not started | - |
 | 4. Batch Download | 0/? | Not started | - |
