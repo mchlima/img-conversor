@@ -45,7 +45,12 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 
 ### Active
 
-(Nenhum — v1.2 shipped. Próximos requisitos definidos em `/gsd:new-milestone`)
+- [ ] Cards sequenciais de passo a passo abaixo da lista de imagens
+- [ ] Guia estático ensinando o fluxo: selecionar → configurar → converter → baixar
+
+## Current Milestone: v1.3 Onboarding Steps
+
+**Goal:** Adicionar guia visual com cards sequenciais abaixo da lista, ensinando o usuário a usar a ferramenta.
 
 ### Out of Scope
 
@@ -110,4 +115,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after v1.2 milestone*
+*Last updated: 2026-03-24 after v1.3 milestone start*
