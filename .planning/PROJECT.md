@@ -48,7 +48,13 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 
 ### Active
 
-(Nenhum — v1.3 shipped. Próximos requisitos definidos em `/gsd:new-milestone`)
+- [ ] Resize exato (px) com valor global como base no ControlPanel
+- [ ] Override de largura/altura por imagem individual no ImageCard
+- [ ] Campos de px por imagem pré-preenchidos com resolução original da imagem
+
+## Current Milestone: v1.4 Per-Image Exact Resize
+
+**Goal:** Tornar o redimensionamento exato (px) individual por imagem, com valor global como base e override por card.
 
 ### Out of Scope
 
@@ -113,4 +119,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after v1.3 milestone*
+*Last updated: 2026-03-24 after v1.4 milestone start*
