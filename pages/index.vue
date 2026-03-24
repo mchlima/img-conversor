@@ -18,6 +18,11 @@
         <div class="space-y-4">
           <DropZone />
 
+          <!-- Download All button: above list per D-02 -->
+          <div v-if="images.length > 0" class="flex justify-end">
+            <DownloadAllButton />
+          </div>
+
           <!-- Image list (D-05: vertical list, one per line) -->
           <div v-if="images.length > 0" class="space-y-2">
             <ImageCard
