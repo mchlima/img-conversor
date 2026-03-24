@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.4
 milestone_name: Per-Image Exact Resize
-status: roadmap_created
-stopped_at: Roadmap created, Phase 8 not started
-last_updated: "2026-03-24T00:00:00.000Z"
+status: unknown
+stopped_at: Completed 08-per-image-exact-resize-01-PLAN.md
+last_updated: "2026-03-24T20:40:37.994Z"
 progress:
   total_phases: 1
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 2
+  completed_plans: 1
 ---
 
 # Project State
@@ -23,8 +23,8 @@ See: .planning/PROJECT.md (updated 2026-03-24)
 
 ## Current Position
 
-Phase: 8
-Plan: Not started
+Phase: 08 (per-image-exact-resize) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Plan: Not started
 - Trend: Stable
 
 *Updated after each plan completion*
+| Phase 08-per-image-exact-resize P01 | 2 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,9 @@ Recent decisions affecting current work:
 - [Phase 06-upload-accumulation-clear]: Background processing loops iterate items (new batch) not images.value to avoid re-processing existing images
 - [Phase 07-onboarding-steps]: Used v-for over step key array in OnboardingSteps for DRY card rendering
 - [Phase 08-per-image-exact-resize]: Per-card override state must be tracked independently from global value — changing global must not stomp manual overrides
+- [Phase 08-per-image-exact-resize]: Processor signature changed from (file: File, opts) to (item: ImageItem, opts) so exact mode reads per-image resize state
+- [Phase 08-per-image-exact-resize]: Per-image resize initialized to original dimensions after createImageBitmap resolves (RSZN-11)
+- [Phase 08-per-image-exact-resize]: Math.min clamping at both updateImageResize and propagateGlobalResize to enforce RSZN-15 invariant
 
 ### Pending Todos
 
@@ -80,6 +84,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-24
-Stopped at: Roadmap created for v1.4, Phase 8 ready to plan
+Last session: 2026-03-24T20:40:37.993Z
+Stopped at: Completed 08-per-image-exact-resize-01-PLAN.md
 Resume file: None

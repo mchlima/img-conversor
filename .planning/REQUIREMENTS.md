@@ -7,12 +7,12 @@
 
 ### Resize
 
-- [ ] **RSZN-10**: No modo "Exato (px)", o ControlPanel define valores globais de largura/altura como base padrão para todas as imagens
+- [x] **RSZN-10**: No modo "Exato (px)", o ControlPanel define valores globais de largura/altura como base padrão para todas as imagens
 - [ ] **RSZN-11**: Cada ImageCard exibe campos de largura/altura individuais quando o modo "Exato (px)" está ativo, pré-preenchidos com a resolução original da imagem
-- [ ] **RSZN-12**: Usuário pode sobrescrever largura/altura em qualquer card individual, independente do valor global
-- [ ] **RSZN-13**: Alteração no valor global atualiza apenas imagens que não foram manualmente sobrescritas (override)
+- [x] **RSZN-12**: Usuário pode sobrescrever largura/altura em qualquer card individual, independente do valor global
+- [x] **RSZN-13**: Alteração no valor global atualiza apenas imagens que não foram manualmente sobrescritas (override)
 - [ ] **RSZN-14**: Campos de largura/altura por imagem mantêm proporção (alterar largura ajusta altura proporcionalmente e vice-versa)
-- [ ] **RSZN-15**: Valores por imagem não aceitam valores maiores que a resolução original da imagem
+- [x] **RSZN-15**: Valores por imagem não aceitam valores maiores que a resolução original da imagem
 
 ## Out of Scope
 
@@ -25,12 +25,12 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RSZN-10 | Phase 8 | Pending |
+| RSZN-10 | Phase 8 | Complete |
 | RSZN-11 | Phase 8 | Pending |
-| RSZN-12 | Phase 8 | Pending |
-| RSZN-13 | Phase 8 | Pending |
+| RSZN-12 | Phase 8 | Complete |
+| RSZN-13 | Phase 8 | Complete |
 | RSZN-14 | Phase 8 | Pending |
-| RSZN-15 | Phase 8 | Pending |
+| RSZN-15 | Phase 8 | Complete |
 
 **Coverage:**
 - v1.4 requirements: 6 total

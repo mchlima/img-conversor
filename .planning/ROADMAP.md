@@ -57,10 +57,10 @@
   3. Editing a card's width/height field updates only that card and marks it as manually overridden, leaving other cards unaffected
   4. Changing the global value in ControlPanel updates all cards that have not been manually overridden, leaving overridden cards unchanged
   5. Changing width in a card's fields automatically adjusts height to maintain the original aspect ratio (and vice versa), and neither field accepts a value larger than the image's original dimension
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
-- [ ] 08-01-PLAN.md — Data layer: extend ImageItem type, store per-image resize logic, processor per-image reading
+- [x] 08-01-PLAN.md — Data layer: extend ImageItem type, store per-image resize logic, processor per-image reading
 - [ ] 08-02-PLAN.md — UI layer: ImageCard resize fields with aspect-ratio lock, ControlPanel global propagation
 
 ## Progress
@@ -74,4 +74,4 @@ Plans:
 | 5. ControlPanel Layout Refactor | v1.1 | 1/1 | Complete | 2026-03-24 |
 | 6. Upload Accumulation & Clear | v1.2 | 1/1 | Complete | 2026-03-24 |
 | 7. Onboarding Steps | v1.3 | 1/1 | Complete | 2026-03-24 |
-| 8. Per-Image Exact Resize | v1.4 | 0/2 | Not started | - |
+| 8. Per-Image Exact Resize | v1.4 | 1/2 | In Progress|  |
