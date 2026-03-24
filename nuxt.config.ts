@@ -7,6 +7,12 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/ui', '@nuxtjs/i18n', '@nuxt/eslint'],
 
+  icon: {
+    clientBundle: {
+      scan: true,
+    },
+  },
+
   i18n: {
     locales: [
       { code: 'en', name: 'English', file: 'en.json' },
