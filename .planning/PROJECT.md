@@ -41,7 +41,13 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 
 ### Active
 
-(Nenhum — v1.1 shipped. Próximos requisitos definidos em `/gsd:new-milestone`)
+- [ ] Novo upload acumula imagens na lista (não substitui)
+- [ ] Botão "Limpar" no ControlPanel para limpar toda a lista
+- [ ] Botão "Limpar" visível apenas quando há imagens na lista
+
+## Current Milestone: v1.2 Accumulate & Clear
+
+**Goal:** Mudar comportamento de upload para acumular imagens e adicionar botão "Limpar" no ControlPanel.
 
 ### Out of Scope
 
@@ -106,4 +112,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after v1.1 milestone*
+*Last updated: 2026-03-24 after v1.2 milestone start*
