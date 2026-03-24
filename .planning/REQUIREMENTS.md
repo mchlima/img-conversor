@@ -24,16 +24,16 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| LAYT-01 | — | Pending |
-| LAYT-02 | — | Pending |
-| LAYT-03 | — | Pending |
-| LAYT-04 | — | Pending |
+| LAYT-01 | Phase 5 | Pending |
+| LAYT-02 | Phase 5 | Pending |
+| LAYT-03 | Phase 5 | Pending |
+| LAYT-04 | Phase 5 | Pending |
 
 **Coverage:**
 - v1.1 requirements: 4 total
-- Mapped to phases: 0
-- Unmapped: 4 ⚠️
+- Mapped to phases: 4
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-24*
-*Last updated: 2026-03-24 after initial definition*
+*Last updated: 2026-03-24 after roadmap creation*

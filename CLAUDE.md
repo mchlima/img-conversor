@@ -3,7 +3,7 @@
 
 **Img Conversor**
 
-Site simples e moderno para converter, redimensionar e ajustar a qualidade de imagens — tudo em uma única ferramenta, sem necessidade de login ou backend. Todo o processamento acontece no browser do usuário. Voltado para produtores de conteúdo, frontend developers, donos de e-commerce e qualquer pessoa que precise otimizar imagens para web.
+Site moderno para converter, redimensionar e ajustar a qualidade de imagens — tudo em uma única ferramenta, sem login ou backend. Todo o processamento acontece no browser do usuário via Canvas API e jSquash WASM. Suporta JPEG, PNG e WebP com processamento cross-browser (Chrome, Firefox, Safari). Voltado para produtores de conteúdo, frontend developers, donos de e-commerce e qualquer pessoa que precise otimizar imagens para web.
 
 **Core Value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
 

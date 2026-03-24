@@ -1,12 +1,12 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-status: unknown
-stopped_at: Completed 04-01-PLAN.md — batch download ZIP feature
-last_updated: "2026-03-24T17:03:42.073Z"
+milestone: v1.1
+milestone_name: UI Refactor
+status: ready_to_plan
+stopped_at: Roadmap created for v1.1 — Phase 5 defined
+last_updated: "2026-03-24"
 progress:
-  total_phases: 4
+  total_phases: 5
   completed_phases: 4
   total_plans: 7
   completed_plans: 7
@@ -19,40 +19,40 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
-**Current focus:** Phase 04 — batch-download
+**Current focus:** Phase 5 — ControlPanel Layout Refactor (v1.1)
 
 ## Current Position
 
-Phase: 4
+Phase: 5 of 5 (ControlPanel Layout Refactor)
 Plan: Not started
+Status: Ready to plan
+Last activity: 2026-03-24 — v1.1 roadmap created, Phase 5 defined
+
+Progress: [████████░░] 80% (v1.0 complete, v1.1 Phase 5 pending)
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 0
-- Average duration: —
-- Total execution time: —
+- Total plans completed: 7
+- Average duration: ~12 min
+- Total execution time: ~1.4 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| Phase 01-scaffold | 2 | ~36 min | ~18 min |
+| Phase 02-processing-pipeline | 2 | ~13 min | ~6.5 min |
+| Phase 03-ui-and-state | 2 | ~17 min | ~8.5 min |
+| Phase 04-batch-download | 1 | ~15 min | ~15 min |
 
 **Recent Trend:**
 
-- Last 5 plans: —
-- Trend: —
+- Last 5 plans: 30, 10, 3, 15, 2 min
+- Trend: Stable
 
 *Updated after each plan completion*
-| Phase 01-scaffold P01 | 6 | 3 tasks | 11 files |
-| Phase 01-scaffold P02 | 30 | 2 tasks | 1 files |
-| Phase 02-processing-pipeline P01 | 10m | 2 tasks | 6 files |
-| Phase 02-processing-pipeline P02 | 3m | 2 tasks | 2 files |
-| Phase 03-ui-and-state P01 | 15m | 2 tasks | 5 files |
-| Phase 03-ui-and-state P02 | 2m | 3 tasks | 4 files |
-| Phase 04-batch-download P01 | 15m | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -61,27 +61,9 @@ Plan: Not started
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- [Init]: Use @jsquash/webp for WebP encoding (not canvas.toBlob) — Safari/iOS fix
-- [Init]: Use OffscreenCanvas + convertToBlob exclusively (never toDataURL)
-- [Init]: Use fflate for ZIP batch download (not JSZip)
-- [Init]: Guard all browser APIs inside onMounted / import.meta.client — run nuxt generate in CI from first commit
-- [Phase 01-scaffold]: langDir set to 'locales/' not 'i18n/locales/' — @nuxtjs/i18n v10 resolves relative to i18nDir
-- [Phase 01-scaffold]: strategy: 'no_prefix' for i18n — keeps URLs clean for SPA-style tool
-- [Phase 01-scaffold]: @jsquash/webp pinned to exact version 1.5.0 — pre-release, API stability not guaranteed
-- [Phase 01-scaffold]: Added 'unsafe-inline' to script-src CSP — Nuxt SSG generates inline hydration scripts that cannot use nonces in static output
-- [Phase 01-scaffold]: vercel.json outputDirectory set to .output/public — required for Nuxt SSG nitro preset output path
-- [Phase 02-processing-pipeline]: @jsquash/resize added to both optimizeDeps.exclude and build.transpile — consistent WASM config pattern
-- [Phase 02-processing-pipeline]: guardCanvasDimensions auto-scales rather than rejects oversized images — less friction per D-01
-- [Phase 02-processing-pipeline]: JPEG transparency fill uses drawImage(tempCanvas) not putImageData — putImageData overwrites fill; drawImage composites alpha-aware
-- [Phase 02-processing-pipeline]: createImageBitmap({ imageOrientation: 'from-image' }) resolves EXIF orientation — no library needed, try/catch fallback for older browsers
-- [Phase 03-ui-and-state]: hasAlpha runs async in background after addImages sets images.value — avoids blocking UI update for responsiveness
-- [Phase 03-ui-and-state]: convertAll skips done/processing items — allows re-running Convert without reprocessing completed images
-- [Phase 03-ui-and-state]: isProcessing is computed() from images array (not stored state) — always consistent, no manual sync needed
-- [Phase 03-ui-and-state]: DropZone compact mode uses flex row with icon + text — clearer affordance than plain text
-- [Phase 03-ui-and-state]: ImageCard savings shown as absolute percentage with sign prefix to avoid confusing double-negative
-- [Phase 03-ui-and-state]: ControlPanel UInputNumber uses local refs synced via watch to maintain reactivity with store state
-- [Phase 04-batch-download]: Use async zip() not zipSync — avoids blocking main thread during ZIP generation
-- [Phase 04-batch-download]: Filename deduplication uses Map<string, number> — appends -2, -3 for duplicates rather than failing silently
+- [Phase 03-ui-and-state]: ControlPanel UInputNumber uses local refs synced via watch — maintain reactivity pattern when refactoring layout
+- [Phase 04-batch-download]: Download All button previously lived outside ControlPanel — moving it inside is the core of Phase 5
+- [Phase 03-ui-and-state]: isProcessing is computed() from images array — conditional visibility for ControlPanel follows same pattern
 
 ### Pending Todos
 
@@ -89,11 +71,10 @@ None yet.
 
 ### Blockers/Concerns
 
-- [Phase 2]: Verify @jsquash/webp 1.5.0 API compatibility before implementation — pre-release, pin version
-- [Phase 2]: EXIF orientation handling library not finalized — evaluate `exifr` vs `createImageBitmap({ imageOrientation: 'from-image' })` at build time
+None.
 
 ## Session Continuity
 
-Last session: 2026-03-24T16:59:44.497Z
-Stopped at: Completed 04-01-PLAN.md — batch download ZIP feature
+Last session: 2026-03-24
+Stopped at: v1.1 roadmap created — Phase 5 ready to plan
 Resume file: None
