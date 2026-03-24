@@ -25,17 +25,17 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RSZN-10 | — | Pending |
-| RSZN-11 | — | Pending |
-| RSZN-12 | — | Pending |
-| RSZN-13 | — | Pending |
-| RSZN-14 | — | Pending |
-| RSZN-15 | — | Pending |
+| RSZN-10 | Phase 8 | Pending |
+| RSZN-11 | Phase 8 | Pending |
+| RSZN-12 | Phase 8 | Pending |
+| RSZN-13 | Phase 8 | Pending |
+| RSZN-14 | Phase 8 | Pending |
+| RSZN-15 | Phase 8 | Pending |
 
 **Coverage:**
 - v1.4 requirements: 6 total
-- Mapped to phases: 0
-- Unmapped: 6 ⚠️
+- Mapped to phases: 6
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-24*

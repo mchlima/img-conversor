@@ -1,15 +1,15 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.3
-milestone_name: Onboarding Steps
-status: unknown
-stopped_at: Completed 07-01-PLAN.md
-last_updated: "2026-03-24T19:19:41.463Z"
+milestone: v1.4
+milestone_name: Per-Image Exact Resize
+status: roadmap_created
+stopped_at: Roadmap created, Phase 8 not started
+last_updated: "2026-03-24T00:00:00.000Z"
 progress:
   total_phases: 1
-  completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
 ---
 
 # Project State
@@ -19,20 +19,20 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
-**Current focus:** Phase 07 — onboarding-steps
+**Current focus:** Phase 08 — per-image-exact-resize
 
 ## Current Position
 
-Phase: 7
+Phase: 8
 Plan: Not started
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: ~12 min
-- Total execution time: ~1.4 hours
+- Total execution time: ~1.5 hours
 
 **By Phase:**
 
@@ -44,14 +44,14 @@ Plan: Not started
 | Phase 04-batch-download | 1 | ~15 min | ~15 min |
 | Phase 05-controlpanel-layout-refactor | 1 | ~2 min | ~2 min |
 | Phase 06-upload-accumulation-clear | 1 | ~5 min | ~5 min |
+| Phase 07-onboarding-steps | 1 | ~5 min | ~5 min |
 
 **Recent Trend:**
 
-- Last 5 plans: 10, 3, 15, 2, 5 min
+- Last 5 plans: 3, 15, 2, 5, 5 min
 - Trend: Stable
 
 *Updated after each plan completion*
-| Phase 07-onboarding-steps P01 | 5 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -68,6 +68,7 @@ Recent decisions affecting current work:
 - [Phase 06-upload-accumulation-clear]: clearImages() revokes all preview URLs before clearing list — memory leak prevention pattern
 - [Phase 06-upload-accumulation-clear]: Background processing loops iterate items (new batch) not images.value to avoid re-processing existing images
 - [Phase 07-onboarding-steps]: Used v-for over step key array in OnboardingSteps for DRY card rendering
+- [Phase 08-per-image-exact-resize]: Per-card override state must be tracked independently from global value — changing global must not stomp manual overrides
 
 ### Pending Todos
 
@@ -79,6 +80,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-24T19:16:59.417Z
-Stopped at: Completed 07-01-PLAN.md
+Last session: 2026-03-24
+Stopped at: Roadmap created for v1.4, Phase 8 ready to plan
 Resume file: None
