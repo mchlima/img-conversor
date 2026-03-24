@@ -12,6 +12,7 @@ export interface ImageItem {
   status: ProcessingStatus
   error: string | null
   previewUrl: string | null
+  hasAlpha: boolean
 }
 
 export interface ConvertOptions {
