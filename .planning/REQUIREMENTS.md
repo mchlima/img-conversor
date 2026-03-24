@@ -22,14 +22,14 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ONBD-01 | — | Pending |
-| ONBD-02 | — | Pending |
-| ONBD-03 | — | Pending |
+| ONBD-01 | Phase 7 | Pending |
+| ONBD-02 | Phase 7 | Pending |
+| ONBD-03 | Phase 7 | Pending |
 
 **Coverage:**
 - v1.3 requirements: 3 total
-- Mapped to phases: 0
-- Unmapped: 3 ⚠️
+- Mapped to phases: 3
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-24*
