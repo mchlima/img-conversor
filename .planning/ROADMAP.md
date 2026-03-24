@@ -37,7 +37,7 @@
 **Plans:** 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Refactor ControlPanel to horizontal bar, absorb Download All, update page layout
+- [x] 05-01-PLAN.md — Refactor ControlPanel to horizontal bar, absorb Download All, update page layout
 
 ## Progress
 

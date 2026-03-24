@@ -2,16 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: UI Refactor
-status: planning
-stopped_at: Phase 5 context gathered
-last_updated: "2026-03-24T17:42:05.360Z"
-last_activity: 2026-03-24 — v1.1 roadmap created, Phase 5 defined
+status: unknown
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-24T17:51:02.234Z"
 progress:
   total_phases: 1
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 80
+  completed_phases: 1
+  total_plans: 1
+  completed_plans: 1
 ---
 
 # Project State
@@ -21,16 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
-**Current focus:** Phase 5 — ControlPanel Layout Refactor (v1.1)
+**Current focus:** Phase 05 — controlpanel-layout-refactor
 
 ## Current Position
 
-Phase: 5 of 5 (ControlPanel Layout Refactor)
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-03-24 — v1.1 roadmap created, Phase 5 defined
-
-Progress: [████████░░] 80% (v1.0 complete, v1.1 Phase 5 pending)
+Phase: 05 (controlpanel-layout-refactor) — EXECUTING
+Plan: 1 of 1
 
 ## Performance Metrics
 
@@ -55,6 +49,7 @@ Progress: [████████░░] 80% (v1.0 complete, v1.1 Phase 5 pend
 - Trend: Stable
 
 *Updated after each plan completion*
+| Phase 05-controlpanel-layout-refactor P01 | 111s | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -66,6 +61,7 @@ Recent decisions affecting current work:
 - [Phase 03-ui-and-state]: ControlPanel UInputNumber uses local refs synced via watch — maintain reactivity pattern when refactoring layout
 - [Phase 04-batch-download]: Download All button previously lived outside ControlPanel — moving it inside is the core of Phase 5
 - [Phase 03-ui-and-state]: isProcessing is computed() from images array — conditional visibility for ControlPanel follows same pattern
+- [Phase 05-controlpanel-layout-refactor]: DownloadAllButton logic absorbed into ControlPanel; hasDoneImages uses .some() not allConverted
 
 ### Pending Todos
 
@@ -77,6 +73,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-24T17:42:05.355Z
-Stopped at: Phase 5 context gathered
-Resume file: .planning/phases/05-controlpanel-layout-refactor/05-CONTEXT.md
+Last session: 2026-03-24T17:51:02.233Z
+Stopped at: Completed 05-01-PLAN.md
+Resume file: None
