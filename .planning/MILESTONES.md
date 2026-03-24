@@ -1,5 +1,15 @@
 # Milestones
 
+## v1.2 Accumulate & Clear (Shipped: 2026-03-24)
+
+**Phases completed:** 1 phases, 1 plans, 2 tasks
+
+**Key accomplishments:**
+
+- Upload behavior changed from replace to accumulate, with clearImages() composable and red 'Limpar' button in ControlPanel using Nuxt UI color=error
+
+---
+
 ## v1.1 UI Refactor (Shipped: 2026-03-24)
 
 **Phases completed:** 1 phases, 1 plans, 0 tasks

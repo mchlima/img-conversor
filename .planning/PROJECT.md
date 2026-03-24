@@ -39,15 +39,13 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 - ✓ Botão "Baixar Todas" dentro do ControlPanel — v1.1
 - ✓ Botão "Baixar Todas" visível apenas com imagens convertidas — v1.1
 
+- ✓ Novo upload acumula imagens na lista (não substitui) — v1.2
+- ✓ Botão "Limpar" no ControlPanel para limpar toda a lista — v1.2
+- ✓ Botão "Limpar" visível apenas quando há imagens na lista — v1.2
+
 ### Active
 
-- [ ] Novo upload acumula imagens na lista (não substitui)
-- [ ] Botão "Limpar" no ControlPanel para limpar toda a lista
-- [ ] Botão "Limpar" visível apenas quando há imagens na lista
-
-## Current Milestone: v1.2 Accumulate & Clear
-
-**Goal:** Mudar comportamento de upload para acumular imagens e adicionar botão "Limpar" no ControlPanel.
+(Nenhum — v1.2 shipped. Próximos requisitos definidos em `/gsd:new-milestone`)
 
 ### Out of Scope
 
@@ -112,4 +110,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after v1.2 milestone start*
+*Last updated: 2026-03-24 after v1.2 milestone*
