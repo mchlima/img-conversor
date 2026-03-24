@@ -15,11 +15,17 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 - ✓ Nuxt 3 + TypeScript project scaffold — Phase 1
 - ✓ SSG build (`nuxt generate`) sem erros — Phase 1
 - ✓ Deploy funcional na Vercel — Phase 1
+- ✓ Conversão entre formatos suportados (JPEG, PNG, WebP) — Phase 2
+- ✓ Controle de qualidade via slider (1-100%) — Phase 2
+- ✓ Redimensionamento proporcional via slider (1-100%) — Phase 2
+- ✓ Redimensionamento por dimensões exatas (largura × altura em px) — Phase 2
+- ✓ Modos de redimensionamento mutuamente exclusivos — Phase 2
+- ✓ PNG transparente → JPEG com fundo branco (não preto) — Phase 2
+- ✓ Guard para limite de canvas do iOS Safari — Phase 2
 
 ### Active
 
 - [ ] Seleção de múltiplas imagens via drag-and-drop ou clique
-- [ ] Conversão entre formatos suportados (JPEG, PNG, WebP)
 - [ ] Controle de qualidade via slider (1-100%)
 - [ ] Redimensionamento proporcional via slider (1-100%)
 - [ ] Redimensionamento por dimensões exatas (largura × altura em px)
@@ -88,4 +94,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after Phase 1 completion*
+*Last updated: 2026-03-24 after Phase 2 completion*
