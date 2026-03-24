@@ -47,7 +47,9 @@
   1. Seção de passo a passo aparece abaixo da lista de imagens em todas as situações (lista vazia ou com imagens)
   2. Quatro cards numerados sequencialmente descrevem o fluxo completo: selecionar, configurar, converter, baixar
   3. Todos os textos dos cards aparecem no idioma correto (PT-BR ou EN) conforme o idioma detectado no browser
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 07-01-PLAN.md — Add OnboardingSteps component with 4 numbered cards and i18n
 
 ## Progress
 
