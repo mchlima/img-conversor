@@ -11,7 +11,7 @@ const {
   setBackgroundColor,
 } = useConvertOptions()
 
-const { images, convertAll, isProcessing } = useImageStore()
+const { images, convertAll, isProcessing, clearImages } = useImageStore()
 
 const formatItems = [
   { label: 'WebP (recommended)', value: 'image/webp' },
@@ -219,6 +219,18 @@ async function handleDownload() {
         @click="handleDownload"
       >
         {{ isGenerating ? $t('batch.generating') : $t('batch.download_all') }}
+      </UButton>
+
+      <!-- CTRL-01 + CTRL-02: Clear button, visible only when images exist -->
+      <UButton
+        v-if="images.length > 0"
+        color="red"
+        variant="outline"
+        icon="i-heroicons-trash"
+        size="md"
+        @click="clearImages"
+      >
+        {{ $t('controls.clear') }}
       </UButton>
     </div>
   </div>
