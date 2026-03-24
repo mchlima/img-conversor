@@ -16,8 +16,8 @@
     "resize_none": "No resize",
     "resize_proportional": "Proportional (%)",
     "resize_exact": "Exact (px)",
-    "width": "Width",
-    "height": "Height",
+    "width": "Width (px)",
+    "height": "Height (px)",
     "bg_color": "Background Color",
     "convert": "Convert"
   },

@@ -92,9 +92,9 @@ async function handleDownload() {
 
 <template>
   <div class="rounded-xl border border-neutral-200 bg-white p-4">
-    <div class="flex flex-wrap items-end gap-4">
+    <div class="flex flex-wrap items-start gap-4">
       <!-- Format selector -->
-      <div class="min-w-[160px] flex flex-col space-y-1.5">
+      <div class="min-w-[160px] flex flex-col justify-between self-stretch">
         <label class="text-sm font-medium text-neutral-700">{{ $t('controls.format') }}</label>
         <USelect
           :items="formatItems"
@@ -104,7 +104,7 @@ async function handleDownload() {
       </div>
 
       <!-- Quality slider -->
-      <div class="min-w-[160px] space-y-1.5">
+      <div class="min-w-[160px] flex flex-col justify-between self-stretch">
         <div class="flex items-center justify-between">
           <label class="text-sm font-medium text-neutral-700">{{ $t('controls.quality') }}</label>
           <span class="text-sm text-neutral-500">{{ options.quality }}%</span>
@@ -119,12 +119,12 @@ async function handleDownload() {
       </div>
 
       <!-- Resize mode toggle (icon-only buttons) -->
-      <div class="space-y-1.5">
+      <div class="flex flex-col justify-between self-stretch">
         <label class="text-sm font-medium text-neutral-700">{{ $t('controls.resize') }}</label>
         <div class="flex gap-1.5">
           <UButton
             :variant="options.resizeMode === 'none' ? 'solid' : 'outline'"
-            icon="i-heroicons-arrows-pointing-in"
+            icon="i-heroicons-x-mark"
             size="xs"
             :title="$t('controls.resize_none')"
             :aria-label="$t('controls.resize_none')"
@@ -132,7 +132,7 @@ async function handleDownload() {
           />
           <UButton
             :variant="options.resizeMode === 'proportional' ? 'solid' : 'outline'"
-            icon="i-heroicons-arrows-pointing-out"
+            icon="i-heroicons-percent-badge"
             size="xs"
             :title="$t('controls.resize_proportional')"
             :aria-label="$t('controls.resize_proportional')"
@@ -140,7 +140,7 @@ async function handleDownload() {
           />
           <UButton
             :variant="options.resizeMode === 'exact' ? 'solid' : 'outline'"
-            icon="i-heroicons-arrow-top-right-on-square"
+            icon="i-heroicons-viewfinder-circle"
             size="xs"
             :title="$t('controls.resize_exact')"
             :aria-label="$t('controls.resize_exact')"
@@ -150,7 +150,7 @@ async function handleDownload() {
       </div>
 
       <!-- Proportional resize slider (shown only when mode === 'proportional') -->
-      <div v-if="options.resizeMode === 'proportional'" class="min-w-[160px] space-y-1.5">
+      <div v-if="options.resizeMode === 'proportional'" class="min-w-[160px] flex flex-col justify-between self-stretch">
         <div class="flex items-center justify-between">
           <label class="text-sm font-medium text-neutral-700">{{ $t('controls.resize_proportional') }}</label>
           <span class="text-sm text-neutral-500">{{ options.resizePercent }}%</span>
@@ -165,28 +165,27 @@ async function handleDownload() {
       </div>
 
       <!-- Exact resize inputs (shown only when mode === 'exact') -->
-      <div v-if="options.resizeMode === 'exact'" class="min-w-[200px] space-y-1.5">
-        <label class="text-sm font-medium text-neutral-700">{{ $t('controls.width') }} / {{ $t('controls.height') }}</label>
-        <div class="flex gap-2">
-          <UInputNumber
+      <div v-if="options.resizeMode === 'exact'" class="flex gap-2">
+        <div class="flex flex-col justify-between self-stretch w-24">
+          <label class="text-sm font-medium text-neutral-700">{{ $t('controls.width') }}</label>
+          <UInput
+            type="number"
             :model-value="localWidth"
-            :min="1"
-            :max="maxWidth"
-            :step="1"
-            @update:model-value="onWidthChange"
+            @update:model-value="v => onWidthChange(Number(v))"
           />
-          <UInputNumber
+        </div>
+        <div class="flex flex-col justify-between self-stretch w-24">
+          <label class="text-sm font-medium text-neutral-700">{{ $t('controls.height') }}</label>
+          <UInput
+            type="number"
             :model-value="localHeight"
-            :min="1"
-            :max="maxHeight"
-            :step="1"
-            @update:model-value="onHeightChange"
+            @update:model-value="v => onHeightChange(Number(v))"
           />
         </div>
       </div>
 
       <!-- Background color picker (shown only when JPEG + any image has alpha) -->
-      <div v-if="showColorPicker" class="min-w-[120px] space-y-1.5">
+      <div v-if="showColorPicker" class="min-w-[120px] flex flex-col justify-between self-stretch">
         <label class="text-sm font-medium text-neutral-700">{{ $t('controls.bg_color') }}</label>
         <div class="flex items-center gap-2">
           <input

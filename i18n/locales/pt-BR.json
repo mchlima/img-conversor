@@ -16,8 +16,8 @@
     "resize_none": "Sem redimensionamento",
     "resize_proportional": "Proporcional (%)",
     "resize_exact": "Exato (px)",
-    "width": "Largura",
-    "height": "Altura",
+    "width": "Largura (px)",
+    "height": "Altura (px)",
     "bg_color": "Cor de Fundo",
     "convert": "Converter"
   },
