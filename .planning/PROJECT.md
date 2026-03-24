@@ -36,7 +36,14 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 
 ### Active
 
-(Nenhum — v1.0 shipped. Próximos requisitos definidos em `/gsd:new-milestone`)
+- [ ] ControlPanel como barra horizontal acima da lista de imagens (não sidebar)
+- [ ] ControlPanel visível apenas quando há imagens selecionadas
+- [ ] Botão "Baixar Todas" dentro do ControlPanel (não separado)
+- [ ] Botão "Baixar Todas" visível apenas quando há imagens convertidas
+
+## Current Milestone: v1.1 UI Refactor
+
+**Goal:** Reorganizar o layout do ControlPanel e consolidar o botão "Baixar Todas" dentro dele, com visibilidade condicional baseada no estado das imagens.
 
 ### Out of Scope
 
@@ -101,4 +108,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after v1.0 milestone*
+*Last updated: 2026-03-24 after v1.1 milestone start*
