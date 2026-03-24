@@ -25,6 +25,16 @@ const showColorPicker = computed(() =>
   && images.value.some(img => img.hasAlpha),
 )
 
+// Computed reference image (first uploaded) for original dimensions
+const referenceImage = computed(() => images.value[0] ?? null)
+const aspectRatio = computed(() => {
+  const img = referenceImage.value
+  if (!img || !img.originalWidth || !img.originalHeight) return 1
+  return img.originalWidth / img.originalHeight
+})
+const maxWidth = computed(() => referenceImage.value?.originalWidth || 16384)
+const maxHeight = computed(() => referenceImage.value?.originalHeight || 16384)
+
 // Local refs for exact resize inputs
 const localWidth = ref<number | null>(options.value.resizeWidth)
 const localHeight = ref<number | null>(options.value.resizeHeight)
@@ -32,14 +42,34 @@ const localHeight = ref<number | null>(options.value.resizeHeight)
 watch(() => options.value.resizeWidth, v => { localWidth.value = v })
 watch(() => options.value.resizeHeight, v => { localHeight.value = v })
 
+// Pre-fill dimensions from reference image when switching to exact mode
+watch(() => options.value.resizeMode, (mode) => {
+  if (mode === 'exact' && referenceImage.value) {
+    const img = referenceImage.value
+    if (img.originalWidth && img.originalHeight) {
+      localWidth.value = img.originalWidth
+      localHeight.value = img.originalHeight
+      setResizeDimensions(img.originalWidth, img.originalHeight)
+    }
+  }
+})
+
 function onWidthChange(val: number | null) {
-  localWidth.value = val
-  setResizeDimensions(val, localHeight.value)
+  if (val == null) return
+  const clamped = Math.min(val, maxWidth.value)
+  localWidth.value = clamped
+  const newHeight = Math.max(1, Math.round(clamped / aspectRatio.value))
+  localHeight.value = Math.min(newHeight, maxHeight.value)
+  setResizeDimensions(localWidth.value, localHeight.value)
 }
 
 function onHeightChange(val: number | null) {
-  localHeight.value = val
-  setResizeDimensions(localWidth.value, val)
+  if (val == null) return
+  const clamped = Math.min(val, maxHeight.value)
+  localHeight.value = clamped
+  const newWidth = Math.max(1, Math.round(clamped * aspectRatio.value))
+  localWidth.value = Math.min(newWidth, maxWidth.value)
+  setResizeDimensions(localWidth.value, localHeight.value)
 }
 
 // LAYT-04: visible when at least one image is done (not necessarily all)
@@ -64,7 +94,7 @@ async function handleDownload() {
   <div class="rounded-xl border border-neutral-200 bg-white p-4">
     <div class="flex flex-wrap items-end gap-4">
       <!-- Format selector -->
-      <div class="min-w-[160px] space-y-1.5">
+      <div class="min-w-[160px] flex flex-col space-y-1.5">
         <label class="text-sm font-medium text-neutral-700">{{ $t('controls.format') }}</label>
         <USelect
           :items="formatItems"
@@ -88,20 +118,34 @@ async function handleDownload() {
         />
       </div>
 
-      <!-- Resize mode toggle -->
-      <div class="min-w-[200px] space-y-1.5">
+      <!-- Resize mode toggle (icon-only buttons) -->
+      <div class="space-y-1.5">
         <label class="text-sm font-medium text-neutral-700">{{ $t('controls.resize') }}</label>
         <div class="flex gap-1.5">
           <UButton
-            v-for="mode in ['none', 'proportional', 'exact'] as const"
-            :key="mode"
-            :variant="options.resizeMode === mode ? 'solid' : 'outline'"
+            :variant="options.resizeMode === 'none' ? 'solid' : 'outline'"
+            icon="i-heroicons-arrows-pointing-in"
             size="xs"
-            class="flex-1 justify-center"
-            @click="setResizeMode(mode)"
-          >
-            {{ $t(`controls.resize_${mode}`) }}
-          </UButton>
+            :title="$t('controls.resize_none')"
+            :aria-label="$t('controls.resize_none')"
+            @click="setResizeMode('none')"
+          />
+          <UButton
+            :variant="options.resizeMode === 'proportional' ? 'solid' : 'outline'"
+            icon="i-heroicons-arrows-pointing-out"
+            size="xs"
+            :title="$t('controls.resize_proportional')"
+            :aria-label="$t('controls.resize_proportional')"
+            @click="setResizeMode('proportional')"
+          />
+          <UButton
+            :variant="options.resizeMode === 'exact' ? 'solid' : 'outline'"
+            icon="i-heroicons-arrow-top-right-on-square"
+            size="xs"
+            :title="$t('controls.resize_exact')"
+            :aria-label="$t('controls.resize_exact')"
+            @click="setResizeMode('exact')"
+          />
         </div>
       </div>
 
@@ -127,14 +171,14 @@ async function handleDownload() {
           <UInputNumber
             :model-value="localWidth"
             :min="1"
-            :max="16384"
+            :max="maxWidth"
             :step="1"
             @update:model-value="onWidthChange"
           />
           <UInputNumber
             :model-value="localHeight"
             :min="1"
-            :max="16384"
+            :max="maxHeight"
             :step="1"
             @update:model-value="onHeightChange"
           />
