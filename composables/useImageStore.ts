@@ -92,7 +92,7 @@ export function useImageStore() {
       if (item.status === 'done' || item.status === 'processing') continue
       item.status = 'processing'
       try {
-        const blob = await convert(item.file, options.value)
+        const blob = await convert(item, options.value)
         item.convertedBlob = blob
         item.convertedSize = blob.size
         item.status = 'done'

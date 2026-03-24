@@ -1,13 +1,16 @@
 import { guardCanvasDimensions } from '~/utils/guardCanvas'
-import type { ConvertOptions } from '~/types'
+import type { ConvertOptions, ImageItem } from '~/types'
 
 export function useProcessor() {
   /**
-   * Convert a File to a Blob using the provided ConvertOptions.
+   * Convert an ImageItem to a Blob using the provided ConvertOptions.
    *
    * Processing order:
    * 1. Decode file to ImageBitmap (EXIF-corrected via imageOrientation)
    * 2. Compute target dimensions from resizeMode
+   *    - 'exact' mode: reads item.resizeWidth / item.resizeHeight (per-image)
+   *    - 'proportional' mode: reads opts.resizePercent (global)
+   *    - 'none' mode: uses original dimensions
    * 3. Guard dimensions against iOS Safari 16M pixel limit
    * 4. Resize via @jsquash/resize (Lanczos) if dimensions differ
    * 5. Encode by format:
@@ -16,7 +19,8 @@ export function useProcessor() {
    *    - PNG:  Canvas convertToBlob with putImageData (no fill needed)
    * 6. Memory cleanup — bitmap.close(), canvas.width = 0
    */
-  const convert = async (file: File, opts: ConvertOptions): Promise<Blob> => {
+  const convert = async (item: ImageItem, opts: ConvertOptions): Promise<Blob> => {
+    const file = item.file
     let bitmap: ImageBitmap | null = null
     let tempCanvas: OffscreenCanvas | null = null
     let finalCanvas: OffscreenCanvas | null = null
@@ -40,8 +44,8 @@ export function useProcessor() {
         targetH = Math.max(1, Math.round(bitmap.height * opts.resizePercent / 100))
       }
       else if (opts.resizeMode === 'exact') {
-        targetW = Math.max(1, opts.resizeWidth ?? bitmap.width)
-        targetH = Math.max(1, opts.resizeHeight ?? bitmap.height)
+        targetW = Math.max(1, item.resizeWidth ?? bitmap.width)
+        targetH = Math.max(1, item.resizeHeight ?? bitmap.height)
       }
       else {
         targetW = bitmap.width
