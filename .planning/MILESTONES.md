@@ -1,5 +1,15 @@
 # Milestones
 
+## v1.3 Onboarding Steps (Shipped: 2026-03-24)
+
+**Phases completed:** 1 phases, 1 plans, 0 tasks
+
+**Key accomplishments:**
+
+- One-liner:
+
+---
+
 ## v1.2 Accumulate & Clear (Shipped: 2026-03-24)
 
 **Phases completed:** 1 phases, 1 plans, 2 tasks
