@@ -54,4 +54,4 @@ Plans:
 | 3. UI and State | v1.0 | 2/2 | Complete | 2026-03-24 |
 | 4. Batch Download | v1.0 | 1/1 | Complete | 2026-03-24 |
 | 5. ControlPanel Layout Refactor | v1.1 | 1/1 | Complete | 2026-03-24 |
-| 6. Upload Accumulation & Clear | v1.2 | 1/1 | Complete   | 2026-03-24 |
+| 6. Upload Accumulation & Clear | v1.2 | 1/1 | Complete    | 2026-03-24 |
