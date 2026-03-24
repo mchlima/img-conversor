@@ -34,16 +34,14 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 - ✓ i18n PT-BR + EN com detecção de idioma do browser — v1.0
 - ✓ Trust signal de privacidade (drop zone + rodapé) — v1.0
 
+- ✓ ControlPanel como barra horizontal acima da lista — v1.1
+- ✓ ControlPanel visível apenas com imagens selecionadas — v1.1
+- ✓ Botão "Baixar Todas" dentro do ControlPanel — v1.1
+- ✓ Botão "Baixar Todas" visível apenas com imagens convertidas — v1.1
+
 ### Active
 
-- [ ] ControlPanel como barra horizontal acima da lista de imagens (não sidebar)
-- [ ] ControlPanel visível apenas quando há imagens selecionadas
-- [ ] Botão "Baixar Todas" dentro do ControlPanel (não separado)
-- [ ] Botão "Baixar Todas" visível apenas quando há imagens convertidas
-
-## Current Milestone: v1.1 UI Refactor
-
-**Goal:** Reorganizar o layout do ControlPanel e consolidar o botão "Baixar Todas" dentro dele, com visibilidade condicional baseada no estado das imagens.
+(Nenhum — v1.1 shipped. Próximos requisitos definidos em `/gsd:new-milestone`)
 
 ### Out of Scope
 
@@ -108,4 +106,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after v1.1 milestone start*
+*Last updated: 2026-03-24 after v1.1 milestone*

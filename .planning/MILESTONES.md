@@ -1,5 +1,15 @@
 # Milestones
 
+## v1.1 UI Refactor (Shipped: 2026-03-24)
+
+**Phases completed:** 1 phases, 1 plans, 0 tasks
+
+**Key accomplishments:**
+
+- One-liner:
+
+---
+
 ## v1.0 MVP (Shipped: 2026-03-24)
 
 **Phases completed:** 4 phases, 7 plans, 14 tasks
