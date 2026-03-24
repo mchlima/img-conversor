@@ -62,5 +62,10 @@ export function useImageStore() {
   // Computed: is any image currently processing? (for disabling Convert button)
   const isProcessing = computed(() => images.value.some(i => i.status === 'processing'))
 
-  return { images, addImages, removeImage, convertAll, isProcessing }
+  // Computed: are ALL images converted? (for enabling Download All button — D-03)
+  const allConverted = computed(() =>
+    images.value.length > 0 && images.value.every(i => i.status === 'done')
+  )
+
+  return { images, addImages, removeImage, convertAll, isProcessing, allConverted }
 }

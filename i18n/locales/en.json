@@ -37,5 +37,10 @@
   },
   "footer": {
     "privacy": "All images are processed locally in your browser. Nothing is uploaded to any server."
+  },
+  "batch": {
+    "download_all": "Download All",
+    "generating": "Generating ZIP...",
+    "tooltip_waiting": "Convert all images first"
   }
 }
