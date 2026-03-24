@@ -28,7 +28,10 @@
     "savings": "saved",
     "increase": "increase",
     "download": "Download",
-    "remove": "Remove"
+    "remove": "Remove",
+    "card_width": "W",
+    "card_height": "H",
+    "card_override": "Custom"
   },
   "status": {
     "idle": "Idle",

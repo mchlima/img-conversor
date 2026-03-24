@@ -28,7 +28,10 @@
     "savings": "economizado",
     "increase": "aumento",
     "download": "Baixar",
-    "remove": "Remover"
+    "remove": "Remover",
+    "card_width": "L",
+    "card_height": "A",
+    "card_override": "Personalizado"
   },
   "status": {
     "idle": "Aguardando",
