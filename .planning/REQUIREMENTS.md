@@ -7,12 +7,12 @@
 
 ### Upload
 
-- [ ] **UPLD-01**: Novo upload de imagens acumula na lista existente (não substitui)
+- [x] **UPLD-01**: Novo upload de imagens acumula na lista existente (não substitui)
 
 ### Controls
 
-- [ ] **CTRL-01**: Botão "Limpar" no ControlPanel que remove todas as imagens da lista
-- [ ] **CTRL-02**: Botão "Limpar" visível apenas quando há imagens na lista
+- [x] **CTRL-01**: Botão "Limpar" no ControlPanel que remove todas as imagens da lista
+- [x] **CTRL-02**: Botão "Limpar" visível apenas quando há imagens na lista
 
 ## Out of Scope
 
@@ -25,9 +25,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| UPLD-01 | Phase 6 | Pending |
-| CTRL-01 | Phase 6 | Pending |
-| CTRL-02 | Phase 6 | Pending |
+| UPLD-01 | Phase 6 | Complete |
+| CTRL-01 | Phase 6 | Complete |
+| CTRL-02 | Phase 6 | Complete |
 
 **Coverage:**
 - v1.2 requirements: 3 total
