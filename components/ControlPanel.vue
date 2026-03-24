@@ -224,7 +224,7 @@ async function handleDownload() {
       <!-- CTRL-01 + CTRL-02: Clear button, visible only when images exist -->
       <UButton
         v-if="images.length > 0"
-        color="red"
+        color="error"
         variant="outline"
         icon="i-heroicons-trash"
         size="md"
