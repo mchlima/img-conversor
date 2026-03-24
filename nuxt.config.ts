@@ -26,12 +26,12 @@ export default defineNuxtConfig({
   vite: {
     plugins: [wasm()],
     optimizeDeps: {
-      exclude: ['@jsquash/webp'],
+      exclude: ['@jsquash/webp', '@jsquash/resize'],
     },
   },
 
   build: {
-    transpile: ['@jsquash/webp'],
+    transpile: ['@jsquash/webp', '@jsquash/resize'],
   },
 
   css: ['~/tailwind.css'],
