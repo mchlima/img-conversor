@@ -8,29 +8,19 @@
 
     <!-- Main content area -->
     <main class="flex-1 px-6 py-6">
-      <div class="max-w-6xl mx-auto lg:grid lg:grid-cols-[320px_1fr] lg:gap-6">
-        <!-- Sidebar: ControlPanel (on desktop, shows on left) -->
-        <aside class="mb-6 lg:mb-0">
-          <ControlPanel />
-        </aside>
+      <div class="max-w-6xl mx-auto space-y-4">
+        <!-- ControlPanel: horizontal bar, visible only when images exist (LAYT-02/D-04) -->
+        <ControlPanel v-if="images.length > 0" />
 
-        <!-- Content: DropZone + Image List -->
-        <div class="space-y-4">
-          <DropZone />
+        <DropZone />
 
-          <!-- Download All button: above list per D-02 -->
-          <div v-if="images.length > 0" class="flex justify-end">
-            <DownloadAllButton />
-          </div>
-
-          <!-- Image list (D-05: vertical list, one per line) -->
-          <div v-if="images.length > 0" class="space-y-2">
-            <ImageCard
-              v-for="item in images"
-              :key="item.id"
-              :item="item"
-            />
-          </div>
+        <!-- Image list (D-05: vertical list, one per line) -->
+        <div v-if="images.length > 0" class="space-y-2">
+          <ImageCard
+            v-for="item in images"
+            :key="item.id"
+            :item="item"
+          />
         </div>
       </div>
     </main>
