@@ -19,6 +19,8 @@ export function useImageStore() {
       file,
       name: file.name,
       originalSize: file.size,
+      originalWidth: 0,
+      originalHeight: 0,
       convertedSize: null,
       convertedBlob: null,
       status: 'idle' as const,
@@ -32,6 +34,14 @@ export function useImageStore() {
       if (item.file.type === 'image/png') {
         hasAlpha(item.file).then(alpha => { item.hasAlpha = alpha })
       }
+    }
+    // Populate original dimensions in background via createImageBitmap
+    for (const item of images.value) {
+      createImageBitmap(item.file).then((bmp) => {
+        item.originalWidth = bmp.width
+        item.originalHeight = bmp.height
+        bmp.close()
+      })
     }
   }
 

@@ -7,6 +7,8 @@ export interface ImageItem {
   file: File
   name: string
   originalSize: number
+  originalWidth: number
+  originalHeight: number
   convertedSize: number | null
   convertedBlob: Blob | null
   status: ProcessingStatus
