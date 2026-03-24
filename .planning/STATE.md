@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Phase 3 context gathered
-last_updated: "2026-03-24T16:10:24.722Z"
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-03-24T16:29:06.751Z"
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 6
+  completed_plans: 5
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
-**Current focus:** Phase 02 — processing-pipeline
+**Current focus:** Phase 03 — ui-and-state
 
 ## Current Position
 
-Phase: 3
-Plan: Not started
+Phase: 03 (ui-and-state) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Plan: Not started
 | Phase 01-scaffold P02 | 30 | 2 tasks | 1 files |
 | Phase 02-processing-pipeline P01 | 10m | 2 tasks | 6 files |
 | Phase 02-processing-pipeline P02 | 3m | 2 tasks | 2 files |
+| Phase 03-ui-and-state P01 | 15m | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,9 @@ Recent decisions affecting current work:
 - [Phase 02-processing-pipeline]: guardCanvasDimensions auto-scales rather than rejects oversized images — less friction per D-01
 - [Phase 02-processing-pipeline]: JPEG transparency fill uses drawImage(tempCanvas) not putImageData — putImageData overwrites fill; drawImage composites alpha-aware
 - [Phase 02-processing-pipeline]: createImageBitmap({ imageOrientation: 'from-image' }) resolves EXIF orientation — no library needed, try/catch fallback for older browsers
+- [Phase 03-ui-and-state]: hasAlpha runs async in background after addImages sets images.value — avoids blocking UI update for responsiveness
+- [Phase 03-ui-and-state]: convertAll skips done/processing items — allows re-running Convert without reprocessing completed images
+- [Phase 03-ui-and-state]: isProcessing is computed() from images array (not stored state) — always consistent, no manual sync needed
 
 ### Pending Todos
 
@@ -83,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T16:10:24.720Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-ui-and-state/03-CONTEXT.md
+Last session: 2026-03-24T16:29:06.750Z
+Stopped at: Completed 03-01-PLAN.md
+Resume file: None

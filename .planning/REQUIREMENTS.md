@@ -9,10 +9,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Input
 
-- [ ] **INPT-01**: Usuário pode selecionar múltiplas imagens via clique no file picker
-- [ ] **INPT-02**: Usuário pode arrastar e soltar múltiplas imagens na área de drop
-- [ ] **INPT-03**: Usuário vê preview da imagem original para identificação
-- [ ] **INPT-04**: Usuário vê o tamanho do arquivo original ao lado de cada imagem
+- [x] **INPT-01**: Usuário pode selecionar múltiplas imagens via clique no file picker
+- [x] **INPT-02**: Usuário pode arrastar e soltar múltiplas imagens na área de drop
+- [x] **INPT-03**: Usuário vê preview da imagem original para identificação
+- [x] **INPT-04**: Usuário vê o tamanho do arquivo original ao lado de cada imagem
 
 ### Conversion
 
@@ -31,11 +31,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Output
 
-- [ ] **OUTP-01**: Usuário vê o tamanho do arquivo convertido ao lado de cada imagem
-- [ ] **OUTP-02**: Usuário vê comparação de tamanho antes/depois (economia em bytes e %)
+- [x] **OUTP-01**: Usuário vê o tamanho do arquivo convertido ao lado de cada imagem
+- [x] **OUTP-02**: Usuário vê comparação de tamanho antes/depois (economia em bytes e %)
 - [ ] **OUTP-03**: Usuário pode baixar cada imagem convertida individualmente
 - [ ] **OUTP-04**: Usuário pode baixar todas as imagens convertidas em um arquivo .zip
-- [ ] **OUTP-05**: Cada imagem exibe status de processamento (idle / processando / concluído / erro)
+- [x] **OUTP-05**: Cada imagem exibe status de processamento (idle / processando / concluído / erro)
 
 ### Infraestrutura
 
@@ -88,10 +88,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INPT-01 | Phase 3 | Pending |
-| INPT-02 | Phase 3 | Pending |
-| INPT-03 | Phase 3 | Pending |
-| INPT-04 | Phase 3 | Pending |
+| INPT-01 | Phase 3 | Complete |
+| INPT-02 | Phase 3 | Complete |
+| INPT-03 | Phase 3 | Complete |
+| INPT-04 | Phase 3 | Complete |
 | CONV-01 | Phase 2 | Complete |
 | CONV-02 | Phase 2 | Complete |
 | CONV-03 | Phase 2 | Complete |
@@ -101,11 +101,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSZN-02 | Phase 2 | Complete |
 | RSZN-03 | Phase 2 | Complete |
 | RSZN-04 | Phase 2 | Complete |
-| OUTP-01 | Phase 3 | Pending |
-| OUTP-02 | Phase 3 | Pending |
+| OUTP-01 | Phase 3 | Complete |
+| OUTP-02 | Phase 3 | Complete |
 | OUTP-03 | Phase 3 | Pending |
 | OUTP-04 | Phase 4 | Pending |
-| OUTP-05 | Phase 3 | Pending |
+| OUTP-05 | Phase 3 | Complete |
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |

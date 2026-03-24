@@ -60,10 +60,10 @@ Plans:
   3. Each image card shows a processing status (idle / converting / done / error) that updates in real time
   4. User can download each converted image individually via a per-card download button
   5. A visible trust signal communicates that images never leave the browser
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
-- [ ] 03-01-PLAN.md — Create useImageStore composable, extend types, add formatBytes utility, populate i18n keys
+- [x] 03-01-PLAN.md — Create useImageStore composable, extend types, add formatBytes utility, populate i18n keys
 - [ ] 03-02-PLAN.md — Build DropZone, ImageCard, ControlPanel components and wire into page layout
 
 ### Phase 4: Batch Download
@@ -85,5 +85,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 2/2 | Complete    | 2026-03-24 |
 | 2. Processing Pipeline | 2/2 | Complete    | 2026-03-24 |
-| 3. UI and State | 0/2 | In progress | - |
+| 3. UI and State | 1/2 | In Progress|  |
 | 4. Batch Download | 0/? | Not started | - |
