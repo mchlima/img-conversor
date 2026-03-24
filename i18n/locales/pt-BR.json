@@ -2,5 +2,40 @@
   "app": {
     "name": "Img Conversor",
     "tagline": "Converta, redimensione e otimize imagens — no seu navegador, instantaneamente."
+  },
+  "dropzone": {
+    "title": "Arraste imagens aqui ou clique para selecionar",
+    "subtitle": "Suporta JPEG, PNG e WebP",
+    "privacy": "As imagens nunca saem do seu navegador. Todo processamento acontece localmente.",
+    "replace": "Arraste novas imagens para substituir a lista atual"
+  },
+  "controls": {
+    "format": "Formato de Saída",
+    "quality": "Qualidade",
+    "resize": "Redimensionar",
+    "resize_none": "Sem redimensionamento",
+    "resize_proportional": "Proporcional (%)",
+    "resize_exact": "Exato (px)",
+    "width": "Largura",
+    "height": "Altura",
+    "bg_color": "Cor de Fundo",
+    "convert": "Converter"
+  },
+  "card": {
+    "before": "Antes",
+    "after": "Depois",
+    "savings": "economizado",
+    "increase": "aumento",
+    "download": "Baixar",
+    "remove": "Remover"
+  },
+  "status": {
+    "idle": "Aguardando",
+    "processing": "Convertendo...",
+    "done": "Concluído",
+    "error": "Erro"
+  },
+  "footer": {
+    "privacy": "Todas as imagens são processadas localmente no seu navegador. Nada é enviado para nenhum servidor."
   }
 }

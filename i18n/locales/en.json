@@ -2,5 +2,40 @@
   "app": {
     "name": "Img Conversor",
     "tagline": "Convert, resize, and optimize images — in your browser, instantly."
+  },
+  "dropzone": {
+    "title": "Drop images here or click to browse",
+    "subtitle": "Supports JPEG, PNG, and WebP",
+    "privacy": "Images never leave your browser. All processing happens locally.",
+    "replace": "Drop new images to replace current list"
+  },
+  "controls": {
+    "format": "Output Format",
+    "quality": "Quality",
+    "resize": "Resize",
+    "resize_none": "No resize",
+    "resize_proportional": "Proportional (%)",
+    "resize_exact": "Exact (px)",
+    "width": "Width",
+    "height": "Height",
+    "bg_color": "Background Color",
+    "convert": "Convert"
+  },
+  "card": {
+    "before": "Before",
+    "after": "After",
+    "savings": "saved",
+    "increase": "increase",
+    "download": "Download",
+    "remove": "Remove"
+  },
+  "status": {
+    "idle": "Idle",
+    "processing": "Converting...",
+    "done": "Done",
+    "error": "Error"
+  },
+  "footer": {
+    "privacy": "All images are processed locally in your browser. Nothing is uploaded to any server."
   }
 }
