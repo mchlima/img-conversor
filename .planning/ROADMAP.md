@@ -61,7 +61,7 @@
 
 Plans:
 - [x] 08-01-PLAN.md — Data layer: extend ImageItem type, store per-image resize logic, processor per-image reading
-- [ ] 08-02-PLAN.md — UI layer: ImageCard resize fields with aspect-ratio lock, ControlPanel global propagation
+- [x] 08-02-PLAN.md — UI layer: ImageCard resize fields with aspect-ratio lock, ControlPanel global propagation
 
 ## Progress
 

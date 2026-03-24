@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.4
 milestone_name: Per-Image Exact Resize
 status: unknown
-stopped_at: Completed 08-per-image-exact-resize-01-PLAN.md
-last_updated: "2026-03-24T20:40:37.994Z"
+stopped_at: Completed 08-per-image-exact-resize-02-PLAN.md
+last_updated: "2026-03-24T20:43:52.102Z"
 progress:
   total_phases: 1
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 2
-  completed_plans: 1
+  completed_plans: 2
 ---
 
 # Project State
@@ -53,6 +53,7 @@ Plan: 2 of 2
 
 *Updated after each plan completion*
 | Phase 08-per-image-exact-resize P01 | 2 | 2 tasks | 3 files |
+| Phase 08-per-image-exact-resize P02 | 2 | 3 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,8 @@ Recent decisions affecting current work:
 - [Phase 08-per-image-exact-resize]: Processor signature changed from (file: File, opts) to (item: ImageItem, opts) so exact mode reads per-image resize state
 - [Phase 08-per-image-exact-resize]: Per-image resize initialized to original dimensions after createImageBitmap resolves (RSZN-11)
 - [Phase 08-per-image-exact-resize]: Math.min clamping at both updateImageResize and propagateGlobalResize to enforce RSZN-15 invariant
+- [Phase 08-per-image-exact-resize]: ImageCard outer div changed to flex-col to accommodate per-image resize row below main content
+- [Phase 08-per-image-exact-resize]: propagateGlobalResize called in onWidthChange, onHeightChange, and mode watch so all non-overridden cards sync on any global dimension change
 
 ### Pending Todos
 
@@ -84,6 +87,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-24T20:40:37.993Z
-Stopped at: Completed 08-per-image-exact-resize-01-PLAN.md
+Last session: 2026-03-24T20:43:52.101Z
+Stopped at: Completed 08-per-image-exact-resize-02-PLAN.md
 Resume file: None
