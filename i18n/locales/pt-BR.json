@@ -43,5 +43,28 @@
     "download_all": "Baixar Todas",
     "generating": "Gerando ZIP...",
     "tooltip_waiting": "Converta todas as imagens primeiro"
+  },
+  "onboarding": {
+    "title": "Como funciona",
+    "step1": {
+      "number": "1",
+      "title": "Selecione imagens",
+      "description": "Arraste e solte ou clique para selecionar. Suporta JPEG, PNG e WebP."
+    },
+    "step2": {
+      "number": "2",
+      "title": "Configure a saida",
+      "description": "Escolha formato, qualidade e opcoes de redimensionamento."
+    },
+    "step3": {
+      "number": "3",
+      "title": "Converta",
+      "description": "Clique em Converter e veja suas imagens processadas instantaneamente."
+    },
+    "step4": {
+      "number": "4",
+      "title": "Baixe",
+      "description": "Baixe individualmente ou todas de uma vez como arquivo ZIP."
+    }
   }
 }
