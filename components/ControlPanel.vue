@@ -198,40 +198,6 @@ async function handleDownload() {
         </div>
       </div>
 
-      <!-- Convert button (ml-auto pushes to right when space allows) -->
-      <UButton
-        color="primary"
-        size="md"
-        class="ml-auto"
-        :disabled="images.length === 0 || isProcessing"
-        :loading="isProcessing"
-        @click="convertAll"
-      >
-        {{ $t('controls.convert') }}
-      </UButton>
-
-      <!-- Download All button (LAYT-04: visible only when at least one image is done) -->
-      <UButton
-        v-if="hasDoneImages"
-        icon="i-heroicons-archive-box-arrow-down"
-        :disabled="!hasDoneImages || isGenerating"
-        :loading="isGenerating"
-        @click="handleDownload"
-      >
-        {{ isGenerating ? $t('batch.generating') : $t('batch.download_all') }}
-      </UButton>
-
-      <!-- CTRL-01 + CTRL-02: Clear button, visible only when images exist -->
-      <UButton
-        v-if="images.length > 0"
-        color="error"
-        variant="outline"
-        icon="i-heroicons-trash"
-        size="md"
-        @click="clearImages"
-      >
-        {{ $t('controls.clear') }}
-      </UButton>
     </div>
   </div>
 </template>
