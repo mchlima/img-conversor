@@ -21,4 +21,5 @@ export interface ConvertOptions {
   resizePercent: number
   resizeWidth: number | null
   resizeHeight: number | null
+  backgroundColor: string   // hex color e.g. '#ffffff' — used when PNG->JPEG (per D-02)
 }
