@@ -2,8 +2,9 @@
   <div class="min-h-screen flex flex-col">
     <!-- Header -->
     <header class="py-4 px-6 border-b border-neutral-200">
-      <h1 class="text-xl font-semibold">{{ $t('app.name') }}</h1>
-      <p class="text-sm text-neutral-500">{{ $t('app.tagline') }}</p>
+      <div class="max-w-6xl mx-auto">
+        <AppLogo class="h-8 text-neutral-800 dark:text-neutral-100" style="aspect-ratio: 984/349;" />
+      </div>
     </header>
 
     <!-- Main content area -->
