@@ -2,16 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Phase 1 context gathered
-last_updated: "2026-03-24T13:46:09.696Z"
-last_activity: 2026-03-24 — Roadmap created
+status: unknown
+stopped_at: Completed 01-scaffold-01-01-PLAN.md
+last_updated: "2026-03-24T14:24:23.888Z"
 progress:
   total_phases: 4
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  total_plans: 2
+  completed_plans: 1
 ---
 
 # Project State
@@ -21,16 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
-**Current focus:** Phase 1 - Scaffold
+**Current focus:** Phase 01 — scaffold
 
 ## Current Position
 
-Phase: 1 of 4 (Scaffold)
-Plan: 0 of ? in current phase
-Status: Ready to plan
-Last activity: 2026-03-24 — Roadmap created
-
-Progress: [░░░░░░░░░░] 0%
+Phase: 01 (scaffold) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -52,6 +46,7 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-scaffold P01 | 6 | 3 tasks | 11 files |
 
 ## Accumulated Context
 
@@ -64,6 +59,9 @@ Recent decisions affecting current work:
 - [Init]: Use OffscreenCanvas + convertToBlob exclusively (never toDataURL)
 - [Init]: Use fflate for ZIP batch download (not JSZip)
 - [Init]: Guard all browser APIs inside onMounted / import.meta.client — run nuxt generate in CI from first commit
+- [Phase 01-scaffold]: langDir set to 'locales/' not 'i18n/locales/' — @nuxtjs/i18n v10 resolves relative to i18nDir
+- [Phase 01-scaffold]: strategy: 'no_prefix' for i18n — keeps URLs clean for SPA-style tool
+- [Phase 01-scaffold]: @jsquash/webp pinned to exact version 1.5.0 — pre-release, API stability not guaranteed
 
 ### Pending Todos
 
@@ -76,6 +74,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T13:46:09.695Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-scaffold/01-CONTEXT.md
+Last session: 2026-03-24T14:24:23.886Z
+Stopped at: Completed 01-scaffold-01-01-PLAN.md
+Resume file: None
