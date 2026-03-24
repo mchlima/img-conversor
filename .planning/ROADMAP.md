@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Scaffold** - Nuxt 3 SSG project with Vercel deploy pipeline and TypeScript types (completed 2026-03-24)
 - [x] **Phase 2: Processing Pipeline** - Complete client-side image conversion, resize, and quality control (completed 2026-03-24)
 - [x] **Phase 3: UI and State** - Full application UI wired to the pipeline with individual download (completed 2026-03-24)
-- [ ] **Phase 4: Batch Download** - ZIP batch download and end-to-end validation
+- [x] **Phase 4: Batch Download** - ZIP batch download and end-to-end validation (completed 2026-03-24)
 
 ## Phase Details
 
@@ -74,10 +74,10 @@ Plans:
   1. "Download All" button is disabled until all images have finished converting
   2. Clicking "Download All" produces a valid .zip file containing all converted images with correct filenames and extensions
   3. ZIP generation does not freeze the browser tab when processing a large batch
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
-- [ ] 04-01-PLAN.md — Install fflate, create downloadAll utility, build DownloadAllButton component, wire into page
+- [x] 04-01-PLAN.md — Install fflate, create downloadAll utility, build DownloadAllButton component, wire into page
 
 ## Progress
 
@@ -89,4 +89,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Scaffold | 2/2 | Complete    | 2026-03-24 |
 | 2. Processing Pipeline | 2/2 | Complete    | 2026-03-24 |
 | 3. UI and State | 2/2 | Complete    | 2026-03-24 |
-| 4. Batch Download | 0/1 | Not started | - |
+| 4. Batch Download | 1/1 | Complete   | 2026-03-24 |

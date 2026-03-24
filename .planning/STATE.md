@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Phase 4 context gathered
-last_updated: "2026-03-24T16:41:09.303Z"
+stopped_at: Completed 04-01-PLAN.md — batch download ZIP feature
+last_updated: "2026-03-24T16:59:44.498Z"
 progress:
   total_phases: 4
-  completed_phases: 3
-  total_plans: 6
-  completed_plans: 6
+  completed_phases: 4
+  total_plans: 7
+  completed_plans: 7
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
-**Current focus:** Phase 03 — ui-and-state
+**Current focus:** Phase 04 — batch-download
 
 ## Current Position
 
-Phase: 4
-Plan: Not started
+Phase: 04 (batch-download) — EXECUTING
+Plan: 1 of 1
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Plan: Not started
 | Phase 02-processing-pipeline P02 | 3m | 2 tasks | 2 files |
 | Phase 03-ui-and-state P01 | 15m | 2 tasks | 5 files |
 | Phase 03-ui-and-state P02 | 2m | 3 tasks | 4 files |
+| Phase 04-batch-download P01 | 15m | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,8 @@ Recent decisions affecting current work:
 - [Phase 03-ui-and-state]: DropZone compact mode uses flex row with icon + text — clearer affordance than plain text
 - [Phase 03-ui-and-state]: ImageCard savings shown as absolute percentage with sign prefix to avoid confusing double-negative
 - [Phase 03-ui-and-state]: ControlPanel UInputNumber uses local refs synced via watch to maintain reactivity with store state
+- [Phase 04-batch-download]: Use async zip() not zipSync — avoids blocking main thread during ZIP generation
+- [Phase 04-batch-download]: Filename deduplication uses Map<string, number> — appends -2, -3 for duplicates rather than failing silently
 
 ### Pending Todos
 
@@ -91,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T16:41:09.301Z
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-batch-download/04-CONTEXT.md
+Last session: 2026-03-24T16:59:44.497Z
+Stopped at: Completed 04-01-PLAN.md — batch download ZIP feature
+Resume file: None
