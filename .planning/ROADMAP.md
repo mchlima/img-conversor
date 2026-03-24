@@ -27,7 +27,7 @@
 
 ### v1.2 Accumulate & Clear
 
-- [ ] **Phase 6: Upload Accumulation & Clear** — Upload acumula imagens; botão Limpar reseta a lista
+- [ ] **Phase 6: Upload Accumulation & Clear** — Upload acumula imagens; botao Limpar reseta a lista
 
 ## Phase Details
 
@@ -40,7 +40,10 @@
   2. A "Limpar" button is visible in the ControlPanel whenever the image list is non-empty
   3. Clicking "Limpar" removes all images from the list, returning to the empty/initial state
   4. The "Limpar" button is not visible when the image list is empty
-**Plans**: TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 06-01-PLAN.md — Accumulate uploads + Limpar button
 
 ## Progress
 
@@ -51,4 +54,4 @@
 | 3. UI and State | v1.0 | 2/2 | Complete | 2026-03-24 |
 | 4. Batch Download | v1.0 | 1/1 | Complete | 2026-03-24 |
 | 5. ControlPanel Layout Refactor | v1.1 | 1/1 | Complete | 2026-03-24 |
-| 6. Upload Accumulation & Clear | v1.2 | 0/? | Not started | - |
+| 6. Upload Accumulation & Clear | v1.2 | 0/1 | Not started | - |
