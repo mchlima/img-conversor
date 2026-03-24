@@ -74,7 +74,10 @@ Plans:
   1. "Download All" button is disabled until all images have finished converting
   2. Clicking "Download All" produces a valid .zip file containing all converted images with correct filenames and extensions
   3. ZIP generation does not freeze the browser tab when processing a large batch
-**Plans**: TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 04-01-PLAN.md — Install fflate, create downloadAll utility, build DownloadAllButton component, wire into page
 
 ## Progress
 
@@ -85,5 +88,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 2/2 | Complete    | 2026-03-24 |
 | 2. Processing Pipeline | 2/2 | Complete    | 2026-03-24 |
-| 3. UI and State | 1/2 | Complete    | 2026-03-24 |
-| 4. Batch Download | 0/? | Not started | - |
+| 3. UI and State | 2/2 | Complete    | 2026-03-24 |
+| 4. Batch Download | 0/1 | Not started | - |
