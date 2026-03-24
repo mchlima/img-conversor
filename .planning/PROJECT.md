@@ -12,7 +12,9 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Nuxt 3 + TypeScript project scaffold — Phase 1
+- ✓ SSG build (`nuxt generate`) sem erros — Phase 1
+- ✓ Deploy funcional na Vercel — Phase 1
 
 ### Active
 
@@ -86,4 +88,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after initialization*
+*Last updated: 2026-03-24 after Phase 1 completion*
