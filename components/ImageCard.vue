@@ -93,7 +93,7 @@ function downloadImage() {
       icon="i-heroicons-x-mark"
       size="xs"
       variant="ghost"
-      color="neutral"
+      color="error"
       :disabled="item.status === 'processing'"
       :title="$t('card.remove')"
       class="shrink-0"
