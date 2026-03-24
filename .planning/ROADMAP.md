@@ -89,4 +89,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Scaffold | 2/2 | Complete    | 2026-03-24 |
 | 2. Processing Pipeline | 2/2 | Complete    | 2026-03-24 |
 | 3. UI and State | 2/2 | Complete    | 2026-03-24 |
-| 4. Batch Download | 1/1 | Complete   | 2026-03-24 |
+| 4. Batch Download | 1/1 | Complete    | 2026-03-24 |
