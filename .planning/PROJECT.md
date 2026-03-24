@@ -22,6 +22,13 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 - ✓ Modos de redimensionamento mutuamente exclusivos — Phase 2
 - ✓ PNG transparente → JPEG com fundo branco (não preto) — Phase 2
 - ✓ Guard para limite de canvas do iOS Safari — Phase 2
+- ✓ Seleção de múltiplas imagens via drag-and-drop ou clique — Phase 3
+- ✓ Preview da imagem original para identificação — Phase 3
+- ✓ Exibição do tamanho do arquivo antes e depois da conversão — Phase 3
+- ✓ Comparação de tamanho antes/depois (economia em bytes e %) — Phase 3
+- ✓ Download individual por imagem processada — Phase 3
+- ✓ Status de processamento por imagem (idle/processando/concluído/erro) — Phase 3
+- ✓ Processamento 100% client-side — Phase 3
 
 ### Active
 
@@ -94,4 +101,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after Phase 2 completion*
+*Last updated: 2026-03-24 after Phase 3 completion*
