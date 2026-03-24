@@ -29,6 +29,7 @@ Conversão de formato + redimensionamento + controle de qualidade em uma única 
 - ✓ Download individual por imagem processada — Phase 3
 - ✓ Status de processamento por imagem (idle/processando/concluído/erro) — Phase 3
 - ✓ Processamento 100% client-side — Phase 3
+- ✓ Download em lote via arquivo .zip — Phase 4
 
 ### Active
 
@@ -101,4 +102,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after Phase 3 completion*
+*Last updated: 2026-03-24 after Phase 4 completion (all phases complete)*
