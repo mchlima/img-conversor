@@ -7,7 +7,7 @@
     "title": "Drop images here or click to browse",
     "subtitle": "Supports JPEG, PNG, and WebP",
     "privacy": "Images never leave your browser. All processing happens locally.",
-    "replace": "Drop new images to replace current list"
+    "add_more": "Drop more images or click to add"
   },
   "controls": {
     "format": "Output Format",
@@ -19,7 +19,8 @@
     "width": "Width (px)",
     "height": "Height (px)",
     "bg_color": "Background Color",
-    "convert": "Convert"
+    "convert": "Convert",
+    "clear": "Clear"
   },
   "card": {
     "before": "Before",

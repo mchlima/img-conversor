@@ -7,7 +7,7 @@
     "title": "Arraste imagens aqui ou clique para selecionar",
     "subtitle": "Suporta JPEG, PNG e WebP",
     "privacy": "As imagens nunca saem do seu navegador. Todo processamento acontece localmente.",
-    "replace": "Arraste novas imagens para substituir a lista atual"
+    "add_more": "Arraste mais imagens ou clique para adicionar"
   },
   "controls": {
     "format": "Formato de Saída",
@@ -19,7 +19,8 @@
     "width": "Largura (px)",
     "height": "Altura (px)",
     "bg_color": "Cor de Fundo",
-    "convert": "Converter"
+    "convert": "Converter",
+    "clear": "Limpar"
   },
   "card": {
     "before": "Antes",

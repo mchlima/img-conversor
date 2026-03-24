@@ -45,7 +45,7 @@ function openPicker() {
     <!-- Compact state (images loaded) -->
     <template v-else>
       <UIcon name="i-heroicons-arrow-up-tray" class="text-neutral-400 size-4 shrink-0" />
-      <p class="text-sm text-neutral-600">{{ $t('dropzone.replace') }}</p>
+      <p class="text-sm text-neutral-600">{{ $t('dropzone.add_more') }}</p>
     </template>
 
     <input

@@ -8,12 +8,8 @@ export function useImageStore() {
   const { convert } = useProcessor()
   const { options } = useConvertOptions()
 
-  // D-02: new upload REPLACES the existing list (not accumulate)
+  // UPLD-01: new upload ACCUMULATES onto the existing list
   async function addImages(files: File[]) {
-    // Revoke existing preview URLs before replacing (memory leak prevention)
-    for (const img of images.value) {
-      if (img.previewUrl) URL.revokeObjectURL(img.previewUrl)
-    }
     const items: ImageItem[] = files.map(file => ({
       id: crypto.randomUUID(),
       file,
@@ -28,15 +24,15 @@ export function useImageStore() {
       previewUrl: URL.createObjectURL(file),
       hasAlpha: false,
     }))
-    images.value = items
+    images.value = [...images.value, ...items]
     // Run hasAlpha checks in background for PNG files (for D-10 conditional color picker)
-    for (const item of images.value) {
+    for (const item of items) {
       if (item.file.type === 'image/png') {
         hasAlpha(item.file).then(alpha => { item.hasAlpha = alpha })
       }
     }
     // Populate original dimensions in background via createImageBitmap
-    for (const item of images.value) {
+    for (const item of items) {
       createImageBitmap(item.file).then((bmp) => {
         item.originalWidth = bmp.width
         item.originalHeight = bmp.height
@@ -49,6 +45,13 @@ export function useImageStore() {
     const img = images.value.find(i => i.id === id)
     if (img?.previewUrl) URL.revokeObjectURL(img.previewUrl)
     images.value = images.value.filter(i => i.id !== id)
+  }
+
+  function clearImages() {
+    for (const img of images.value) {
+      if (img.previewUrl) URL.revokeObjectURL(img.previewUrl)
+    }
+    images.value = []
   }
 
   // D-08: explicit Convert button triggers this
@@ -77,5 +80,5 @@ export function useImageStore() {
     images.value.length > 0 && images.value.every(i => i.status === 'done')
   )
 
-  return { images, addImages, removeImage, convertAll, isProcessing, allConverted }
+  return { images, addImages, removeImage, clearImages, convertAll, isProcessing, allConverted }
 }
