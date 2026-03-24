@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-24T14:49:45.632Z"
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-24T15:13:27.754Z"
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
+  total_plans: 4
+  completed_plans: 3
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Conversão de formato + redimensionamento + controle de qualidade em uma única operação — sem fricção, sem upload para servidor, sem cadastro.
-**Current focus:** Phase 01 — scaffold
+**Current focus:** Phase 02 — processing-pipeline
 
 ## Current Position
 
-Phase: 2
-Plan: Not started
+Phase: 02 (processing-pipeline) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -48,6 +48,7 @@ Plan: Not started
 *Updated after each plan completion*
 | Phase 01-scaffold P01 | 6 | 3 tasks | 11 files |
 | Phase 01-scaffold P02 | 30 | 2 tasks | 1 files |
+| Phase 02-processing-pipeline P01 | 10m | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,8 @@ Recent decisions affecting current work:
 - [Phase 01-scaffold]: @jsquash/webp pinned to exact version 1.5.0 — pre-release, API stability not guaranteed
 - [Phase 01-scaffold]: Added 'unsafe-inline' to script-src CSP — Nuxt SSG generates inline hydration scripts that cannot use nonces in static output
 - [Phase 01-scaffold]: vercel.json outputDirectory set to .output/public — required for Nuxt SSG nitro preset output path
+- [Phase 02-processing-pipeline]: @jsquash/resize added to both optimizeDeps.exclude and build.transpile — consistent WASM config pattern
+- [Phase 02-processing-pipeline]: guardCanvasDimensions auto-scales rather than rejects oversized images — less friction per D-01
 
 ### Pending Todos
 
@@ -77,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T14:49:45.630Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-processing-pipeline/02-CONTEXT.md
+Last session: 2026-03-24T15:13:27.753Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: None

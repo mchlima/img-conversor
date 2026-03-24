@@ -16,9 +16,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Conversion
 
-- [ ] **CONV-01**: Usuário pode escolher formato de saída entre JPEG, PNG e WebP
+- [x] **CONV-01**: Usuário pode escolher formato de saída entre JPEG, PNG e WebP
 - [ ] **CONV-02**: WebP é o formato de saída pré-selecionado (recomendado)
-- [ ] **CONV-03**: Usuário pode ajustar qualidade de saída via slider de 1 a 100%
+- [x] **CONV-03**: Usuário pode ajustar qualidade de saída via slider de 1 a 100%
 - [ ] **CONV-04**: Conversão funciona corretamente em Chrome, Firefox e Safari
 - [ ] **CONV-05**: Nenhuma imagem é enviada para servidores — processamento 100% client-side
 
@@ -42,8 +42,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **INFR-01**: Projeto roda com Nuxt 3 + TypeScript
 - [x] **INFR-02**: Build SSG (`nuxt generate`) completa sem erros
 - [x] **INFR-03**: Deploy funcional na Vercel a partir do repositório
-- [ ] **INFR-04**: PNG transparente convertido para JPEG renderiza com fundo branco (não preto)
-- [ ] **INFR-05**: Imagens maiores que o limite de canvas do iOS Safari (16M pixels) são redimensionadas automaticamente ou rejeitadas com mensagem clara
+- [x] **INFR-04**: PNG transparente convertido para JPEG renderiza com fundo branco (não preto)
+- [x] **INFR-05**: Imagens maiores que o limite de canvas do iOS Safari (16M pixels) são redimensionadas automaticamente ou rejeitadas com mensagem clara
 
 ## v2 Requirements
 
@@ -92,9 +92,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INPT-02 | Phase 3 | Pending |
 | INPT-03 | Phase 3 | Pending |
 | INPT-04 | Phase 3 | Pending |
-| CONV-01 | Phase 2 | Pending |
+| CONV-01 | Phase 2 | Complete |
 | CONV-02 | Phase 2 | Pending |
-| CONV-03 | Phase 2 | Pending |
+| CONV-03 | Phase 2 | Complete |
 | CONV-04 | Phase 2 | Pending |
 | CONV-05 | Phase 2 | Pending |
 | RSZN-01 | Phase 2 | Pending |
@@ -109,8 +109,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
-| INFR-04 | Phase 2 | Pending |
-| INFR-05 | Phase 2 | Pending |
+| INFR-04 | Phase 2 | Complete |
+| INFR-05 | Phase 2 | Complete |
 
 **Coverage:**
 - v1 requirements: 23 total

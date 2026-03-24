@@ -44,10 +44,10 @@ Plans:
   3. WebP output is correctly encoded in Safari and iOS (not silently downgraded to PNG)
   4. Activating the proportional resize slider disables the exact-pixel inputs, and vice versa
   5. Processing 10+ large images sequentially does not crash or produce blank outputs
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
-- [ ] 02-01-PLAN.md — Install @jsquash/resize, extend types, create hasAlpha and guardCanvas utilities
+- [x] 02-01-PLAN.md — Install @jsquash/resize, extend types, create hasAlpha and guardCanvas utilities
 - [ ] 02-02-PLAN.md — Build useProcessor and useConvertOptions composables
 
 ### Phase 3: UI and State
@@ -80,6 +80,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold | 2/2 | Complete    | 2026-03-24 |
-| 2. Processing Pipeline | 0/2 | In progress | - |
+| 2. Processing Pipeline | 1/2 | In Progress|  |
 | 3. UI and State | 0/? | Not started | - |
 | 4. Batch Download | 0/? | Not started | - |
