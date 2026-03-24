@@ -11,7 +11,7 @@ const {
   setBackgroundColor,
 } = useConvertOptions()
 
-const { images, convertAll, isProcessing, clearImages } = useImageStore()
+const { images, convertAll, isProcessing, clearImages, propagateGlobalResize } = useImageStore()
 
 const formatItems = [
   { label: 'WebP (recommended)', value: 'image/webp' },
@@ -50,6 +50,7 @@ watch(() => options.value.resizeMode, (mode) => {
       localWidth.value = img.originalWidth
       localHeight.value = img.originalHeight
       setResizeDimensions(img.originalWidth, img.originalHeight)
+      propagateGlobalResize(img.originalWidth, img.originalHeight)
     }
   }
 })
@@ -61,6 +62,7 @@ function onWidthChange(val: number | null) {
   const newHeight = Math.max(1, Math.round(clamped / aspectRatio.value))
   localHeight.value = Math.min(newHeight, maxHeight.value)
   setResizeDimensions(localWidth.value, localHeight.value)
+  propagateGlobalResize(localWidth.value, localHeight.value)
 }
 
 function onHeightChange(val: number | null) {
@@ -70,6 +72,7 @@ function onHeightChange(val: number | null) {
   const newWidth = Math.max(1, Math.round(clamped * aspectRatio.value))
   localWidth.value = Math.min(newWidth, maxWidth.value)
   setResizeDimensions(localWidth.value, localHeight.value)
+  propagateGlobalResize(localWidth.value, localHeight.value)
 }
 
 // LAYT-04: visible when at least one image is done (not necessarily all)
