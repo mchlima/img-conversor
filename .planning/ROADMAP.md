@@ -35,7 +35,7 @@
 
 ### v1.3 Onboarding Steps
 
-- [ ] **Phase 7: Onboarding Steps** — Cards sequenciais estáticos ensinando o fluxo de uso da ferramenta
+- [x] **Phase 7: Onboarding Steps** — Cards sequenciais estáticos ensinando o fluxo de uso da ferramenta (completed 2026-03-24)
 
 ## Phase Details
 
@@ -47,9 +47,9 @@
   1. Seção de passo a passo aparece abaixo da lista de imagens em todas as situações (lista vazia ou com imagens)
   2. Quatro cards numerados sequencialmente descrevem o fluxo completo: selecionar, configurar, converter, baixar
   3. Todos os textos dos cards aparecem no idioma correto (PT-BR ou EN) conforme o idioma detectado no browser
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 Plans:
-- [ ] 07-01-PLAN.md — Add OnboardingSteps component with 4 numbered cards and i18n
+- [x] 07-01-PLAN.md — Add OnboardingSteps component with 4 numbered cards and i18n
 
 ## Progress
 
@@ -61,4 +61,4 @@ Plans:
 | 4. Batch Download | v1.0 | 1/1 | Complete | 2026-03-24 |
 | 5. ControlPanel Layout Refactor | v1.1 | 1/1 | Complete | 2026-03-24 |
 | 6. Upload Accumulation & Clear | v1.2 | 1/1 | Complete | 2026-03-24 |
-| 7. Onboarding Steps | v1.3 | 0/1 | Not started | - |
+| 7. Onboarding Steps | v1.3 | 1/1 | Complete   | 2026-03-24 |

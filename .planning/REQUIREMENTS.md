@@ -7,9 +7,9 @@
 
 ### Onboarding
 
-- [ ] **ONBD-01**: Seção de passo a passo com cards sequenciais exibida abaixo da lista de imagens
-- [ ] **ONBD-02**: Cards numerados mostrando o fluxo: 1) Selecione imagens 2) Configure formato e qualidade 3) Clique em Converter 4) Baixe individualmente ou todas
-- [ ] **ONBD-03**: Textos do passo a passo com suporte a i18n (PT-BR e EN)
+- [x] **ONBD-01**: Seção de passo a passo com cards sequenciais exibida abaixo da lista de imagens
+- [x] **ONBD-02**: Cards numerados mostrando o fluxo: 1) Selecione imagens 2) Configure formato e qualidade 3) Clique em Converter 4) Baixe individualmente ou todas
+- [x] **ONBD-03**: Textos do passo a passo com suporte a i18n (PT-BR e EN)
 
 ## Out of Scope
 
@@ -22,9 +22,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| ONBD-01 | Phase 7 | Pending |
-| ONBD-02 | Phase 7 | Pending |
-| ONBD-03 | Phase 7 | Pending |
+| ONBD-01 | Phase 7 | Complete |
+| ONBD-02 | Phase 7 | Complete |
+| ONBD-03 | Phase 7 | Complete |
 
 **Coverage:**
 - v1.3 requirements: 3 total
