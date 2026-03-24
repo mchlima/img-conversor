@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-24T15:13:27.754Z"
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-24T15:18:34.226Z"
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -49,6 +49,7 @@ Plan: 2 of 2
 | Phase 01-scaffold P01 | 6 | 3 tasks | 11 files |
 | Phase 01-scaffold P02 | 30 | 2 tasks | 1 files |
 | Phase 02-processing-pipeline P01 | 10m | 2 tasks | 6 files |
+| Phase 02-processing-pipeline P02 | 3m | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,8 @@ Recent decisions affecting current work:
 - [Phase 01-scaffold]: vercel.json outputDirectory set to .output/public — required for Nuxt SSG nitro preset output path
 - [Phase 02-processing-pipeline]: @jsquash/resize added to both optimizeDeps.exclude and build.transpile — consistent WASM config pattern
 - [Phase 02-processing-pipeline]: guardCanvasDimensions auto-scales rather than rejects oversized images — less friction per D-01
+- [Phase 02-processing-pipeline]: JPEG transparency fill uses drawImage(tempCanvas) not putImageData — putImageData overwrites fill; drawImage composites alpha-aware
+- [Phase 02-processing-pipeline]: createImageBitmap({ imageOrientation: 'from-image' }) resolves EXIF orientation — no library needed, try/catch fallback for older browsers
 
 ### Pending Todos
 
@@ -80,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T15:13:27.753Z
-Stopped at: Completed 02-01-PLAN.md
+Last session: 2026-03-24T15:18:34.225Z
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None

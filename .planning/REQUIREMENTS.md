@@ -17,17 +17,17 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Conversion
 
 - [x] **CONV-01**: Usuário pode escolher formato de saída entre JPEG, PNG e WebP
-- [ ] **CONV-02**: WebP é o formato de saída pré-selecionado (recomendado)
+- [x] **CONV-02**: WebP é o formato de saída pré-selecionado (recomendado)
 - [x] **CONV-03**: Usuário pode ajustar qualidade de saída via slider de 1 a 100%
-- [ ] **CONV-04**: Conversão funciona corretamente em Chrome, Firefox e Safari
-- [ ] **CONV-05**: Nenhuma imagem é enviada para servidores — processamento 100% client-side
+- [x] **CONV-04**: Conversão funciona corretamente em Chrome, Firefox e Safari
+- [x] **CONV-05**: Nenhuma imagem é enviada para servidores — processamento 100% client-side
 
 ### Resize
 
-- [ ] **RSZN-01**: Usuário pode redimensionar proporcionalmente via slider de 1 a 100%
-- [ ] **RSZN-02**: Usuário pode definir dimensões exatas em pixels (largura × altura)
-- [ ] **RSZN-03**: Os dois modos de redimensionamento são mutuamente exclusivos — ativar um desativa o outro
-- [ ] **RSZN-04**: Redimensionamento proporcional mantém aspect ratio da imagem original
+- [x] **RSZN-01**: Usuário pode redimensionar proporcionalmente via slider de 1 a 100%
+- [x] **RSZN-02**: Usuário pode definir dimensões exatas em pixels (largura × altura)
+- [x] **RSZN-03**: Os dois modos de redimensionamento são mutuamente exclusivos — ativar um desativa o outro
+- [x] **RSZN-04**: Redimensionamento proporcional mantém aspect ratio da imagem original
 
 ### Output
 
@@ -93,14 +93,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INPT-03 | Phase 3 | Pending |
 | INPT-04 | Phase 3 | Pending |
 | CONV-01 | Phase 2 | Complete |
-| CONV-02 | Phase 2 | Pending |
+| CONV-02 | Phase 2 | Complete |
 | CONV-03 | Phase 2 | Complete |
-| CONV-04 | Phase 2 | Pending |
-| CONV-05 | Phase 2 | Pending |
-| RSZN-01 | Phase 2 | Pending |
-| RSZN-02 | Phase 2 | Pending |
-| RSZN-03 | Phase 2 | Pending |
-| RSZN-04 | Phase 2 | Pending |
+| CONV-04 | Phase 2 | Complete |
+| CONV-05 | Phase 2 | Complete |
+| RSZN-01 | Phase 2 | Complete |
+| RSZN-02 | Phase 2 | Complete |
+| RSZN-03 | Phase 2 | Complete |
+| RSZN-04 | Phase 2 | Complete |
 | OUTP-01 | Phase 3 | Pending |
 | OUTP-02 | Phase 3 | Pending |
 | OUTP-03 | Phase 3 | Pending |

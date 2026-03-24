@@ -48,7 +48,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Install @jsquash/resize, extend types, create hasAlpha and guardCanvas utilities
-- [ ] 02-02-PLAN.md — Build useProcessor and useConvertOptions composables
+- [x] 02-02-PLAN.md — Build useProcessor and useConvertOptions composables
 
 ### Phase 3: UI and State
 **Goal**: Users can drop or pick multiple images, configure conversion settings globally, and download each converted image individually — with file sizes and processing status visible throughout
