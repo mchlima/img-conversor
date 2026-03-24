@@ -23,6 +23,9 @@ export function useImageStore() {
       error: null,
       previewUrl: URL.createObjectURL(file),
       hasAlpha: false,
+      resizeWidth: null,
+      resizeHeight: null,
+      resizeOverride: false,
     }))
     images.value = [...images.value, ...items]
     // Run hasAlpha checks in background for PNG files (for D-10 conditional color picker)
@@ -32,10 +35,13 @@ export function useImageStore() {
       }
     }
     // Populate original dimensions in background via createImageBitmap
+    // Also pre-fill per-image resize dimensions with original dimensions (RSZN-11)
     for (const item of items) {
       createImageBitmap(item.file).then((bmp) => {
         item.originalWidth = bmp.width
         item.originalHeight = bmp.height
+        item.resizeWidth = bmp.width
+        item.resizeHeight = bmp.height
         bmp.close()
       })
     }
@@ -52,6 +58,32 @@ export function useImageStore() {
       if (img.previewUrl) URL.revokeObjectURL(img.previewUrl)
     }
     images.value = []
+  }
+
+  // RSZN-12: manually override per-image dimensions; marks image as overridden
+  function updateImageResize(id: string, width: number | null, height: number | null) {
+    const item = images.value.find(i => i.id === id)
+    if (!item) return
+    if (width !== null) {
+      item.resizeWidth = Math.min(width, item.originalWidth)
+    }
+    if (height !== null) {
+      item.resizeHeight = Math.min(height, item.originalHeight)
+    }
+    item.resizeOverride = true
+  }
+
+  // RSZN-13: propagate global resize values to non-overridden images only
+  function propagateGlobalResize(globalWidth: number | null, globalHeight: number | null) {
+    for (const item of images.value) {
+      if (item.resizeOverride === true) continue
+      item.resizeWidth = globalWidth !== null
+        ? Math.min(globalWidth, item.originalWidth)
+        : item.originalWidth
+      item.resizeHeight = globalHeight !== null
+        ? Math.min(globalHeight, item.originalHeight)
+        : item.originalHeight
+    }
   }
 
   // D-08: explicit Convert button triggers this
@@ -80,5 +112,5 @@ export function useImageStore() {
     images.value.length > 0 && images.value.every(i => i.status === 'done')
   )
 
-  return { images, addImages, removeImage, clearImages, convertAll, isProcessing, allConverted }
+  return { images, addImages, removeImage, clearImages, convertAll, isProcessing, allConverted, updateImageResize, propagateGlobalResize }
 }

@@ -15,6 +15,9 @@ export interface ImageItem {
   error: string | null
   previewUrl: string | null
   hasAlpha: boolean
+  resizeWidth: number | null
+  resizeHeight: number | null
+  resizeOverride: boolean
 }
 
 export interface ConvertOptions {
