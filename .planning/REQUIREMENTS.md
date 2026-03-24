@@ -41,7 +41,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **INFR-01**: Projeto roda com Nuxt 3 + TypeScript
 - [x] **INFR-02**: Build SSG (`nuxt generate`) completa sem erros
-- [ ] **INFR-03**: Deploy funcional na Vercel a partir do repositório
+- [x] **INFR-03**: Deploy funcional na Vercel a partir do repositório
 - [ ] **INFR-04**: PNG transparente convertido para JPEG renderiza com fundo branco (não preto)
 - [ ] **INFR-05**: Imagens maiores que o limite de canvas do iOS Safari (16M pixels) são redimensionadas automaticamente ou rejeitadas com mensagem clara
 
@@ -108,7 +108,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OUTP-05 | Phase 3 | Pending |
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
-| INFR-03 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Complete |
 | INFR-04 | Phase 2 | Pending |
 | INFR-05 | Phase 2 | Pending |
 
