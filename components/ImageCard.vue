@@ -3,7 +3,7 @@ import type { ImageItem } from '~/types'
 import { formatBytes } from '~/utils/formatBytes'
 
 const props = defineProps<{ item: ImageItem }>()
-const { removeImage, updateImageResize } = useImageStore()
+const { removeImage, updateImageResize, updateImageResizePercent } = useImageStore()
 const { options } = useConvertOptions()
 
 const statusColor = computed(() => ({
@@ -26,30 +26,44 @@ const aspectRatio = computed(() =>
     : 1,
 )
 
+// Proportional mode: computed dimensions based on per-image %
+const proportionalW = computed(() =>
+  props.item.originalWidth
+    ? Math.round(props.item.originalWidth * props.item.resizePercent / 100)
+    : 0,
+)
+const proportionalH = computed(() =>
+  props.item.originalHeight
+    ? Math.round(props.item.originalHeight * props.item.resizePercent / 100)
+    : 0,
+)
+
 // Local refs synced from the item's reactive state
 const localW = ref(props.item.resizeWidth)
 const localH = ref(props.item.resizeHeight)
 
-watch(() => props.item.resizeWidth, (v) => { localW.value = v })
-watch(() => props.item.resizeHeight, (v) => { localH.value = v })
+watch(() => props.item.resizeWidth, (v) => { localW.value = v }, { immediate: true })
+watch(() => props.item.resizeHeight, (v) => { localH.value = v }, { immediate: true })
 
 function onCardWidthChange(val: number | null) {
   if (val == null) return
-  const clamped = Math.min(val, props.item.originalWidth || Infinity)
-  const newH = Math.max(1, Math.round(clamped / aspectRatio.value))
-  const clampedH = Math.min(newH, props.item.originalHeight || Infinity)
+  const maxW = props.item.originalWidth || Infinity
+  const maxH = props.item.originalHeight || Infinity
+  const clamped = Math.max(1, Math.min(val, maxW))
+  const newH = Math.max(1, Math.min(Math.round(clamped / aspectRatio.value), maxH))
   localW.value = clamped
-  localH.value = clampedH
-  updateImageResize(props.item.id, clamped, clampedH)
+  localH.value = newH
+  updateImageResize(props.item.id, clamped, newH)
 }
 
 function onCardHeightChange(val: number | null) {
   if (val == null) return
-  const clamped = Math.min(val, props.item.originalHeight || Infinity)
-  const newW = Math.max(1, Math.round(clamped * aspectRatio.value))
-  const clampedW = Math.min(newW, props.item.originalWidth || Infinity)
+  const maxW = props.item.originalWidth || Infinity
+  const maxH = props.item.originalHeight || Infinity
+  const clamped = Math.max(1, Math.min(val, maxH))
+  const newW = Math.max(1, Math.min(Math.round(clamped * aspectRatio.value), maxW))
   localH.value = clamped
-  localW.value = clampedW
+  localW.value = newW
   updateImageResize(props.item.id, clampedW, clamped)
 }
 
@@ -137,12 +151,29 @@ function downloadImage() {
       />
     </div>
 
-    <!-- Per-image resize row (shown only in exact mode) -->
+    <!-- Per-image resize row: proportional (slider + computed dimensions) -->
+    <div v-if="options.resizeMode === 'proportional'" class="flex items-center gap-2 mt-1 pt-1 border-t border-neutral-100">
+      <USlider
+        :model-value="item.resizePercent"
+        :min="1"
+        :max="100"
+        :step="1"
+        class="w-24"
+        size="xs"
+        @update:model-value="(v: number) => updateImageResizePercent(item.id, v)"
+      />
+      <span class="text-xs text-neutral-500 shrink-0">{{ item.resizePercent }}%</span>
+      <span class="text-xs text-neutral-400 shrink-0">{{ proportionalW }}×{{ proportionalH }}</span>
+      <UBadge v-if="item.resizePercentOverride" color="info" :label="$t('card.card_override')" size="xs" />
+    </div>
+
     <div v-if="options.resizeMode === 'exact'" class="flex items-center gap-2 mt-1 pt-1 border-t border-neutral-100">
       <span class="text-xs text-neutral-500">{{ $t('card.card_width') }}</span>
       <UInput
         type="number"
         :model-value="localW"
+        :min="1"
+        :max="item.originalWidth || undefined"
         size="xs"
         class="w-20"
         @update:model-value="v => onCardWidthChange(Number(v))"
@@ -151,6 +182,8 @@ function downloadImage() {
       <UInput
         type="number"
         :model-value="localH"
+        :min="1"
+        :max="item.originalHeight || undefined"
         size="xs"
         class="w-20"
         @update:model-value="v => onCardHeightChange(Number(v))"

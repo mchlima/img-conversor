@@ -26,22 +26,24 @@ export function useImageStore() {
       resizeWidth: null,
       resizeHeight: null,
       resizeOverride: false,
+      resizePercent: options.value.resizePercent,
+      resizePercentOverride: false,
     }))
     images.value = [...images.value, ...items]
-    // Run hasAlpha checks in background for PNG files (for D-10 conditional color picker)
-    for (const item of items) {
-      if (item.file.type === 'image/png') {
-        hasAlpha(item.file).then(alpha => { item.hasAlpha = alpha })
+    // Run background tasks on the REACTIVE items (not the local copies)
+    const startIdx = images.value.length - items.length
+    for (let i = 0; i < items.length; i++) {
+      const reactiveItem = images.value[startIdx + i]
+      // hasAlpha check for PNG files (D-10 conditional color picker)
+      if (reactiveItem.file.type === 'image/png') {
+        hasAlpha(reactiveItem.file).then((alpha) => { reactiveItem.hasAlpha = alpha })
       }
-    }
-    // Populate original dimensions in background via createImageBitmap
-    // Also pre-fill per-image resize dimensions with original dimensions (RSZN-11)
-    for (const item of items) {
-      createImageBitmap(item.file).then((bmp) => {
-        item.originalWidth = bmp.width
-        item.originalHeight = bmp.height
-        item.resizeWidth = bmp.width
-        item.resizeHeight = bmp.height
+      // Populate original dimensions + pre-fill per-image resize (RSZN-11)
+      createImageBitmap(reactiveItem.file).then((bmp) => {
+        reactiveItem.originalWidth = bmp.width
+        reactiveItem.originalHeight = bmp.height
+        reactiveItem.resizeWidth = bmp.width
+        reactiveItem.resizeHeight = bmp.height
         bmp.close()
       })
     }
@@ -71,6 +73,22 @@ export function useImageStore() {
       item.resizeHeight = Math.min(height, item.originalHeight)
     }
     item.resizeOverride = true
+  }
+
+  // Per-image proportional resize
+  function updateImageResizePercent(id: string, percent: number) {
+    const item = images.value.find(i => i.id === id)
+    if (!item) return
+    item.resizePercent = Math.max(1, Math.min(100, percent))
+    item.resizePercentOverride = true
+  }
+
+  // Propagate global % to non-overridden images
+  function propagateGlobalResizePercent(globalPercent: number) {
+    for (const item of images.value) {
+      if (item.resizePercentOverride === true) continue
+      item.resizePercent = globalPercent
+    }
   }
 
   // RSZN-13: propagate global resize values to non-overridden images only
@@ -112,5 +130,5 @@ export function useImageStore() {
     images.value.length > 0 && images.value.every(i => i.status === 'done')
   )
 
-  return { images, addImages, removeImage, clearImages, convertAll, isProcessing, allConverted, updateImageResize, propagateGlobalResize }
+  return { images, addImages, removeImage, clearImages, convertAll, isProcessing, allConverted, updateImageResize, propagateGlobalResize, updateImageResizePercent, propagateGlobalResizePercent }
 }

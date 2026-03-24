@@ -18,6 +18,8 @@ export interface ImageItem {
   resizeWidth: number | null
   resizeHeight: number | null
   resizeOverride: boolean
+  resizePercent: number
+  resizePercentOverride: boolean
 }
 
 export interface ConvertOptions {

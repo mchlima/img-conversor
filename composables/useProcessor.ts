@@ -40,8 +40,9 @@ export function useProcessor() {
       let targetH: number
 
       if (opts.resizeMode === 'proportional') {
-        targetW = Math.max(1, Math.round(bitmap.width * opts.resizePercent / 100))
-        targetH = Math.max(1, Math.round(bitmap.height * opts.resizePercent / 100))
+        const pct = item.resizePercent ?? opts.resizePercent
+        targetW = Math.max(1, Math.round(bitmap.width * pct / 100))
+        targetH = Math.max(1, Math.round(bitmap.height * pct / 100))
       }
       else if (opts.resizeMode === 'exact') {
         targetW = Math.max(1, item.resizeWidth ?? bitmap.width)

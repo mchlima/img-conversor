@@ -11,7 +11,7 @@ const {
   setBackgroundColor,
 } = useConvertOptions()
 
-const { images, convertAll, isProcessing, clearImages, propagateGlobalResize } = useImageStore()
+const { images, convertAll, isProcessing, clearImages, propagateGlobalResize, propagateGlobalResizePercent } = useImageStore()
 
 const formatItems = [
   { label: 'WebP (recommended)', value: 'image/webp' },
@@ -163,7 +163,7 @@ async function handleDownload() {
           :min="1"
           :max="100"
           :step="1"
-          @update:model-value="setResizePercent"
+          @update:model-value="(v: number) => { setResizePercent(v); propagateGlobalResizePercent(v) }"
         />
       </div>
 
