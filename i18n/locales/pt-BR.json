@@ -37,7 +37,8 @@
     "error": "Erro"
   },
   "footer": {
-    "privacy": "Todas as imagens são processadas localmente no seu navegador. Nada é enviado para nenhum servidor."
+    "privacy": "Todas as imagens são processadas localmente no seu navegador. Nada é enviado para nenhum servidor.",
+    "developed_by": "Desenvolvido por"
   },
   "batch": {
     "download_all": "Baixar Todas",

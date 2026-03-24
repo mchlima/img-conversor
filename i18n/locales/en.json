@@ -37,7 +37,8 @@
     "error": "Error"
   },
   "footer": {
-    "privacy": "All images are processed locally in your browser. Nothing is uploaded to any server."
+    "privacy": "All images are processed locally in your browser. Nothing is uploaded to any server.",
+    "developed_by": "Developed by"
   },
   "batch": {
     "download_all": "Download All",

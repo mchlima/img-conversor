@@ -67,8 +67,12 @@
     </main>
 
     <!-- Footer with trust signal (D-11: second location) -->
-    <footer class="py-4 px-6 border-t border-neutral-200 text-center">
+    <footer class="py-4 px-6 border-t border-neutral-200 text-center space-y-1">
       <p class="text-sm text-neutral-400">{{ $t('footer.privacy') }}</p>
+      <p class="text-xs text-neutral-400">
+        {{ $t('footer.developed_by') }}
+        <a href="https://agencia201.com.br" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Agência 201</a>
+      </p>
     </footer>
   </div>
 </template>
